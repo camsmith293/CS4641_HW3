@@ -19,7 +19,7 @@ class kMeansClusterer():
         self.clusterer.fit(data)
 
     def display_centroids(self):
-        img_size = self.dataset[0].shape
+        img_size = self.dataset.data[0].shape
 
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
