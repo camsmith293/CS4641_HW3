@@ -1,4 +1,5 @@
 from sklearn.cluster import MiniBatchKMeans
+from sklearn.preprocessing import scale
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,7 +15,8 @@ class kMeansClusterer():
 
     def cluster(self, iterations=100):
         self.clusterer.max_iter = iterations
-        self.clusterer.fit(self.dataset)
+        data = scale(self.dataset.data)
+        self.clusterer.fit(data)
 
     def display_centroids(self):
         img_size = self.dataset[0].shape
