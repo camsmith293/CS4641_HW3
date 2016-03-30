@@ -1,6 +1,6 @@
 from sklearn.datasets import load_digits, load_iris
 
-from src.kMeansClusterer import kMeansClusterer
+from kMeansClusterer import kMeansClusterer
 
 digits = load_digits()
 iris = load_iris()
