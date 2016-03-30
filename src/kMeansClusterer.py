@@ -25,7 +25,7 @@ class kMeansClusterer():
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
             plt.subplot(9, 9, i + 1)
-            plt.imshow(patch.reshape(img_size), cmap=plt.cm.gray,
+            plt.imshow(patch, cmap=plt.cm.gray,
                        interpolation='nearest')
             plt.xticks(())
             plt.yticks(())
