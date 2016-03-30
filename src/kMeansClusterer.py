@@ -1,4 +1,4 @@
-from sklearn.cluster import MiniBatchKMeans
+from sklearn.cluster import KMeans
 from sklearn.preprocessing import scale
 
 import numpy as np
@@ -11,9 +11,9 @@ class kMeansClusterer():
         self.num_clusters = num_clusters
         self.dataset_name = dataset_name
 
-        self.clusterer = MiniBatchKMeans(self.num_clusters, verbose=1)
+        self.clusterer = KMeans(self.num_clusters, verbose=1)
 
-    def cluster(self, iterations=100):
+    def cluster(self, iterations=500):
         self.clusterer.max_iter = iterations
         data = scale(self.dataset.data)
         self.clusterer.fit(data)
@@ -24,14 +24,15 @@ class kMeansClusterer():
 
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
-            plt.subplot(9, 9, i + 1)
-            plt.imshow(patch, cmap=plt.cm.gray,
+            print(patch, len(patch))
+            plt.subplot(10, 10, i + 1)
+            plt.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
                        interpolation='nearest')
             plt.xticks(())
             plt.yticks(())
 
 
-        plt.suptitle('Centroids of Minibatch KMeans Clustering of\n ', self.dataset_name)
+        plt.suptitle('Centroids of Minibatch KMeans Clustering of\n ' + self.dataset_name)
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
         plt.show()
