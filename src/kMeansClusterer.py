@@ -18,10 +18,7 @@ class kMeansClusterer():
         data = scale(self.dataset.data)
         self.clusterer.fit(data)
 
-    def display_centroids(self):
-        img_size = self.clusterer.cluster_centers_.shape[1]
-        print(img_size)
-
+    def display_digits_centroids(self):
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
             print(patch, len(patch))
@@ -32,7 +29,7 @@ class kMeansClusterer():
             plt.yticks(())
 
 
-        plt.suptitle('Centroids of Minibatch KMeans Clustering of\n ' + self.dataset_name)
+        plt.suptitle('Centroids of KMeans Clustering of\n ' + self.dataset_name)
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
         plt.show()

@@ -28,7 +28,7 @@ class EMClusterer():
         for index, (name, clusterer) in enumerate(self.clusterers.items()):
             for i, patch in enumerate(clusterer.means_):
                 print(patch, len(patch))
-                plt.subplot(10, 10, i + 1)
+                plt.subplot(10, 10, i + index + 1)
                 plt.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
                            interpolation='nearest')
                 plt.xticks(())
@@ -42,7 +42,7 @@ class EMClusterer():
         #                 label=self.dataset.target_names[n])
 
 
-        plt.suptitle('Centroids of Minibatch KMeans Clustering of\n ' + self.dataset_name)
+        plt.suptitle('Centroids of Expected Maximum Clustering of\n ' + self.dataset_name)
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
         plt.show()
