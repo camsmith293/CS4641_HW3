@@ -17,8 +17,9 @@ class EMClusterer():
                     covariance_type=covar_type, init_params='wc', n_iter=500, verbose=1))
                    for covar_type in ['spherical', 'diag', 'tied', 'full'])
 
-    def cluster(self, iterations=500):
-        data = scale(self.dataset.data)
+    def cluster(self, iterations=500, data=None):
+        if data is None:
+            data = scale(self.dataset.data)
         for index, (name, clusterer) in enumerate(self.clusterers.items()):
             print("Fitting dataset using covariance type ", clusterer.covariance_type)
             clusterer.n_iter=iterations

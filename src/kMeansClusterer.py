@@ -14,10 +14,11 @@ class kMeansClusterer():
 
         self.clusterer = KMeans(self.num_clusters, verbose=1)
 
-    def cluster(self, iterations=500):
+    def cluster(self, iterations=500, data = None):
         self.clusterer.max_iter = iterations
         #data = scale(self.dataset.data)
-        data = self.dataset.data
+        if data is None:
+            data = self.dataset.data
         self.clusterer.fit(data)
 
     def display_digits_centroids(self):

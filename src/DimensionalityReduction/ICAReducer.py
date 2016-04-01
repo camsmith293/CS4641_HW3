@@ -11,5 +11,11 @@ class ICAReducer():
 
         self.reducer = FastICA(n_components=self.n_components)
 
-    def __reduce__(self):
+    def reduce(self):
         return self.reducer.fit_transform(self.data)
+
+    def display_reduced_digits(self):
+        return
+
+    def display_reduced_iris(self):
+        return

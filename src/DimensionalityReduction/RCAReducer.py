@@ -13,3 +13,9 @@ class RCAReducer():
 
     def reduce(self):
         return self.reducer.fit_transform(self.data)
+
+    def display_reduced_digits(self):
+        return
+
+    def display_reduced_iris(self):
+        return
