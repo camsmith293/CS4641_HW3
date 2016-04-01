@@ -20,7 +20,7 @@ def EMClusterDigits():
     EM.display_digits_centroids()
 
 def kMeansClusterIris():
-    kMeans = kMeansClusterer(digits, 10, digits_name)
+    kMeans = kMeansClusterer(iris, 10, iris_name)
     kMeans.cluster()
     kMeans.display_iris_clusterings()
 
@@ -29,4 +29,4 @@ def EMClusterIris():
     EM.cluster()
     EM.display_digits_centroids()
 
-EMClusterDigits()
+kMeansClusterIris()
