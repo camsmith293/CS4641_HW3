@@ -27,11 +27,11 @@ class EMClusterer():
     def display_digits_centroids(self):
         fig = plt.figure(figsize=(4.2, 4))
 
-        w = 0.4
-        h = 0.4
+        w = 0.08
+        h = 0.08
         for i, (name, clusterer) in enumerate(self.clusterers.items()):
-            pos = [0.075 + 1.1*w, 0.18 + i*1.2*h, w, h]
             for j, patch in enumerate(clusterer.means_):
+                pos = [0.075 + j*1.1*w, 0.18 + i*1.2*h, w, h]
                 a = fig.add_axes(pos)
                 a.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
                            interpolation='nearest')
