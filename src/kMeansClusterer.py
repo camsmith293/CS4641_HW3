@@ -1,3 +1,4 @@
+from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import scale
 
@@ -15,7 +16,8 @@ class kMeansClusterer():
 
     def cluster(self, iterations=500):
         self.clusterer.max_iter = iterations
-        data = scale(self.dataset.data)
+        #data = scale(self.dataset.data)
+        data = self.dataset.data
         self.clusterer.fit(data)
 
     def display_digits_centroids(self):
@@ -32,3 +34,22 @@ class kMeansClusterer():
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
         plt.show()
+
+    def display_iris_clusterings(self):
+        fig = plt.figure(figsize=(4, 3))
+        plt.clf()
+        ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+
+        plt.cla()
+
+        X = self.dataset.data
+        labels = self.clusterer.labels_
+
+        ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float))
+
+        ax.w_xaxis.set_ticklabels([])
+        ax.w_yaxis.set_ticklabels([])
+        ax.w_zaxis.set_ticklabels([])
+        ax.set_xlabel('Petal width')
+        ax.set_ylabel('Sepal length')
+        ax.set_zlabel('Petal length')
