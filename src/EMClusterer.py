@@ -25,15 +25,18 @@ class EMClusterer():
 
 
     def display_digits_centroids(self):
-        plt.figure(figsize=(4.2, 4))
-        for index, (name, clusterer) in enumerate(self.clusterers.items()):
-            for i, patch in enumerate(clusterer.means_):
-                print(patch, len(patch))
-                plt.subplot(10, 10, i + index + 1)
-                plt.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
+        fig = plt.figure(figsize=(4.2, 4))
+
+        w = 0.4
+        h = 0.22
+        for i, (name, clusterer) in enumerate(self.clusterers.items()):
+            for j, patch in enumerate(clusterer.means_):
+                pos = [0.075 + j*1.1*w, 0.18 + i*1.2*h, w, h]
+                a = fig.add_axes(pos)
+                a.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
                            interpolation='nearest')
-                plt.xticks(())
-                plt.yticks(())
+                # plt.xticks(())
+                # plt.yticks(())
 
         # colors = cm.rainbow(np.linspace(0, 1, 10))
         #
