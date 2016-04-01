@@ -1,5 +1,4 @@
 from sklearn.random_projection import GaussianRandomProjection
-from sklearn.datasets import load_iris
 
 class RCAReducer():
 
@@ -14,6 +13,3 @@ class RCAReducer():
 
     def reduce(self):
         return self.reducer.fit_transform(self.data)
-
-rca = RCAReducer(load_iris(), "iris")
-print(rca.reduce())
