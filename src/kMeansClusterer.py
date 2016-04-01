@@ -21,7 +21,6 @@ class kMeansClusterer():
     def display_digits_centroids(self):
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
-            print(patch, len(patch))
             plt.subplot(10, 10, i + 1)
             plt.imshow(patch.reshape(8, 8), cmap=plt.cm.gray,
                        interpolation='nearest')
