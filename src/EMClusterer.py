@@ -1,4 +1,5 @@
 from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D
 from sklearn.mixture import GMM
 from sklearn.preprocessing import scale
 
@@ -38,15 +39,29 @@ class EMClusterer():
                 plt.xticks(())
                 plt.yticks(())
 
-        # colors = cm.rainbow(np.linspace(0, 1, 10))
-        #
-        # for n, color in enumerate(colors):
-        #     data = self.dataset.data[self.dataset.target == n]
-        #     plt.scatter(data[:, 0], data[:, 1], 0.8, color=color,
-        #                 label=self.dataset.target_names[n])
-
-
         plt.suptitle('Centroids of Expected Maximum Clustering of\n ' + self.dataset_name)
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
         plt.show()
+
+    def display_iris_clusterings(self):
+        for i, (name, clusterer) in enumerate(self.clusterers.items()):
+            fig = plt.figure(figsize=(4, 3))
+            plt.clf()
+            ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+
+            plt.cla()
+
+            for n, color in enumerate('rgb'):
+                data = self.dataset.data[self.dataset.target == n]
+                ax.scatter(data[:, 0], data[:, 1], 0.8, color=color,
+                            label=self.dataset.target_names[n])
+
+            ax.w_xaxis.set_ticklabels([])
+            ax.w_yaxis.set_ticklabels([])
+            ax.w_zaxis.set_ticklabels([])
+            ax.set_xlabel('Petal width')
+            ax.set_ylabel('Sepal length')
+            ax.set_zlabel('Petal length')
+
+            plt.show()
