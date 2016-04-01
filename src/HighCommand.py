@@ -27,6 +27,6 @@ def kMeansClusterIris():
 def EMClusterIris():
     EM = EMClusterer(iris, 3, iris_name)
     EM.cluster()
-    EM.display_digits_centroids()
+    EM.display_iris_clusterings()
 
 kMeansClusterIris()
