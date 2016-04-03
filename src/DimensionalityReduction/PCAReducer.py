@@ -51,7 +51,7 @@ class PCAReducer():
         for i in range(15):
             print("\nInput %d:\n" % i)
             print(self.data[i], " ->\n")
-            print(self.reduced[i], "\n")
+            print(self.reducer.transform(self.data[i]), "\n")
 
     def display_reduced_iris(self):
         return
