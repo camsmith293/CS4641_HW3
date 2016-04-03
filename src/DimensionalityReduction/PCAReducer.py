@@ -18,7 +18,7 @@ class PCAReducer():
 
     def reduce(self, num_components=10):
         self.reducer.num_components = num_components
-        self.reduced = self.reducer.fit_transform(self.data)
+        self.reduced = scale(self.reducer.fit_transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
@@ -47,6 +47,11 @@ class PCAReducer():
         for i,component in enumerate(self.reducer.components_.tolist()):
             print("\nComponent %d: " % i, component)
             print("Variance of component %d :" % i, self.reducer.explained_variance_ratio_[i])
+        print(40 * '-')
+        for i in range(15):
+            print("\nInput %d:\n" % i)
+            print(self.data[i], " ->\n")
+            print(self.reduced[i], "\n")
 
     def display_reduced_iris(self):
         return
