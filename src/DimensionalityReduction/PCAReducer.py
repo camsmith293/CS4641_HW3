@@ -5,7 +5,6 @@ from sklearn.decomposition import PCA
 from sklearn import metrics
 from sklearn.preprocessing import scale
 
-
 class PCAReducer():
 
     def __init__(self, dataset, dataset_name):
@@ -18,7 +17,8 @@ class PCAReducer():
 
     def reduce(self, num_components=10):
         self.reducer.num_components = num_components
-        self.reduced = scale(self.reducer.fit_transform(self.data))
+        self.reducer.fit(self.data)
+        self.reduced = scale(self.reducer.transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
