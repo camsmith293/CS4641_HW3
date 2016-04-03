@@ -5,7 +5,7 @@ from sklearn import metrics
 from sklearn.preprocessing import scale
 
 
-class PCAReducer():
+class RCAReducer():
 
     def __init__(self, dataset, dataset_name):
         self.dataset = dataset
