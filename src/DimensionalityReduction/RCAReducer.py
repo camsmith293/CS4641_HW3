@@ -7,16 +7,15 @@ from sklearn.preprocessing import scale
 
 class RCAReducer():
 
-    def __init__(self, dataset, dataset_name):
+    def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
         self.data = scale(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
-        self.reducer = GaussianRandomProjection()
+        self.reducer = GaussianRandomProjection(n_components=num_components)
 
-    def reduce(self, num_components=10):
-        self.reducer.num_components = num_components
+    def reduce(self):
         self.reduced = self.reducer.fit_transform(self.data)
         return self.reduced
 
