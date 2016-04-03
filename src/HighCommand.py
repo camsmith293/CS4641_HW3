@@ -33,7 +33,7 @@ def EMClusterIris():
     EM.cluster()
     EM.display_iris_clusterings()
 
-def reduce_digits:
+def reduce_digits():
     reducers = [PCAReducer(digits, digits_name),
                 ICAReducer(digits, digits_name),
                 RCAReducer(digits, digits_name),
@@ -43,4 +43,9 @@ def reduce_digits:
         reducer.reduce()
         reducer.display_reduced_digits()
 
-kMeansClusterIris()
+def PCAReduce_digits():
+    pca = PCAReducer(digits, digits_name)
+    pca.reduce()
+    pca.display_reduced_digits()
+
+PCAReduce_digits()
