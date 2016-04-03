@@ -43,8 +43,8 @@ class PCAReducer():
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
         for i,component in enumerate(self.reducer.components_.tolist()):
-            print("Component %d " % i, component)
-            print("Variance of component %d :" % self.reducer.explained_variance_ratio_[i])
+            print("Component %d: " % i, component)
+            print("Variance of component %d :" % i, self.reducer.explained_variance_ratio_[i])
 
     def display_reduced_iris(self):
         return
