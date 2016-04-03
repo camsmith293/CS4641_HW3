@@ -15,7 +15,7 @@ class PCAReducer():
 
         self.reducer = PCA()
 
-    def reduce(self, num_components=2):
+    def reduce(self, num_components=10):
         self.reducer.num_components = num_components
         self.reduced = self.reducer.fit_transform(self.data)
         return self.reduced
