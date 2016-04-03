@@ -16,6 +16,7 @@ class EMClusterer():
         self.clusterers = dict((covar_type, GMM(n_components=num_clusters,
                     covariance_type=covar_type, init_params='wc', n_iter=500, verbose=1))
                    for covar_type in ['spherical', 'diag', 'tied', 'full'])
+        self.clusterer = self.clusterers.items()[0]
 
     def cluster(self, iterations=500, data=None):
         if data is None:
