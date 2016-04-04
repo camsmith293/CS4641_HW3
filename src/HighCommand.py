@@ -48,4 +48,9 @@ def PCAReduce_digits():
     pca.reduce()
     pca.display_reduced_digits()
 
-PCAReduce_digits()
+def ICAReduce_digits():
+    ica = ICAReducer(digits, digits_name)
+    ica.reduce()
+    ica.display_reduced_digits()
+
+ICAReduce_digits()
