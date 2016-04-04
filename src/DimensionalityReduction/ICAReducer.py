@@ -59,4 +59,14 @@ class ICAReducer():
             print(kurtosis(points), "\n")
 
     def display_reduced_iris(self):
-        return
+        sys.stdout = open('ICAReduceIrisOutput.txt', 'w')
+        print("ICA Reduction of %s:\n" % self.dataset_name)
+        print(40 * '-')
+        print(self.reduced)
+        print("\nLength of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
+        print(40 * '-')
+        print("\nProjection axes:\n")
+        for i,axis in enumerate(self.reducer.mixing_):
+            print("Axis %d:\n" % i, axis)
+        self.compute_plane_kurtoses()

@@ -53,15 +53,16 @@ class RCAReducer():
     def compute_plane_variance(self):
         points_along_dimension = self.reduced.T
         for i,points in enumerate(points_along_dimension):
-            mean = np.mean(points)
-            print(np.mean(points))
             print("\nVariance of dimension %d:" % i)
-            # print(points.std() ** 2, "\n")
-            sum = 0
-            for point in points:
-                sum += (point - mean) ** 2
-            var = sum / len(points.tolist())
-            print(var)
+            print(np.var(points), "\n")
 
     def display_reduced_iris(self):
-        return
+        sys.stdout = open('RCAReduceIrisOutput.txt', 'w')
+        print("RCA Reduction of %s:\n" % self.dataset_name)
+        print(40 * '-')
+        print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
+        print("\nProjection axes:\n")
+        for i,axis in enumerate(self.reducer.components_.tolist()):
+            print("Axis %d:\n" % i, axis)
+        self.compute_plane_variance()

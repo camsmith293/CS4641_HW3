@@ -55,4 +55,16 @@ class PCAReducer():
             print(self.reducer.transform(self.data[i]), "\n")
 
     def display_reduced_iris(self):
-        return
+        sys.stdout = open('PCAReduceIrisOutput.txt', 'w')
+        print("PCA Reduction of %s:\n" % self.dataset_name)
+        print(40 * '-')
+        print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
+        for i,component in enumerate(self.reducer.components_.tolist()):
+            print("\nComponent %d: " % i, component)
+            print("Variance of component %d :" % i, self.reducer.explained_variance_ratio_[i])
+        print(40 * '-')
+        for i in range(15):
+            print("\nInput %d:\n" % i)
+            print(self.data[i], " ->\n")
+            print(self.reducer.transform(self.data[i]), "\n")

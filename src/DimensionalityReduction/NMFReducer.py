@@ -1,22 +1,23 @@
+import sys
 from time import time
 
 from sklearn.decomposition import NMF
 from sklearn import metrics
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import scale
 
-
-class NMFReducer():
+class ICAReducer():
 
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
-        self.data = MinMaxScaler(dataset.data)
+        self.data = scale(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
-        self.reducer = NMF(n_components=num_components)
+        self.reducer = NMF(n_components=num_components, max_iter=5000)
 
     def reduce(self):
-        self.reduced = self.reducer.fit_transform(self.data)
+        self.reducer.fit(self.data)
+        self.reduced = scale(self.reducer.transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
@@ -37,7 +38,21 @@ class NMFReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
-        print("PCA Reduction of %s:\n" % self.dataset_name)
+        sys.stdout = open('NMFReduceDigitsOutput.txt', 'w')
+        print("NMF Reduction of %s:\n" % self.dataset_name)
+        print(40 * '-')
+        print(self.reduced)
+        print("\nLength of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
+        print(40 * '-')
+        print(self.reducer.reconstruction_err_)
 
     def display_reduced_iris(self):
-        return
+        sys.stdout = open('NMFReduceIrisOutput.txt', 'w')
+        print("NMF Reduction of %s:\n" % self.dataset_name)
+        print(40 * '-')
+        print(self.reduced)
+        print("\nLength of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
+        print(40 * '-')
+        print(self.reducer.reconstruction_err_)
