@@ -53,7 +53,7 @@ class RCAReducer():
     def compute_plane_variance(self):
         points_along_dimension = self.reduced.T
         for i,points in enumerate(points_along_dimension):
-            print(points)
+            print(np.mean(points))
             print("\nVariance of dimension %d:" % i)
             print(points.std() ** 2, "\n")
 
