@@ -59,7 +59,7 @@ class RCAReducer():
             # print(points.std() ** 2, "\n")
             sum = 0
             for point in points:
-                sum += (point - sum) ** 2
+                sum += (point - mean) ** 2
             var = sum / len(points)
             print(var)
 
