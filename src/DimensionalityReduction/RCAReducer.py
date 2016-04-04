@@ -53,9 +53,15 @@ class RCAReducer():
     def compute_plane_variance(self):
         points_along_dimension = self.reduced.T
         for i,points in enumerate(points_along_dimension):
+            mean = np.mean(points)
             print(np.mean(points))
             print("\nVariance of dimension %d:" % i)
-            print(points.std() ** 2, "\n")
+            # print(points.std() ** 2, "\n")
+            sum = 0
+            for point in points:
+                sum += (point - sum) ** 2
+            var = sum / len(points)
+            print(var)
 
     def display_reduced_iris(self):
         return
