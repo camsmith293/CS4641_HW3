@@ -42,12 +42,16 @@ class ICAReducer():
         sys.stdout = open('ICAReduceDigitsOutput.txt', 'w')
         print("ICA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
-        print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
+        print(self.reduced)
+        print("\nLength of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
         print(40 * '-')
         print("\nProjection axes:\n")
         for i,axis in enumerate(self.reducer.mixing_):
             print("Axis %d:\n" % i, axis)
+            
+    def compute_plane_kurtosity(self, plane):
+        print()
 
     def display_reduced_iris(self):
         return
