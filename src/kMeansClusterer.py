@@ -78,7 +78,7 @@ class kMeansClusterer():
         plt.savefig(outfile)
 
     def display_reduced_clusterings(self, reducer):
-        filename = "kMeans" + self.dataset_name + type(reducer).__name__ + "reduction.txt"
+        filename = "out/kMeans" + self.dataset_name + type(reducer).__name__ + "reduction.txt"
         sys.stdout = open(filename)
         print("%s Reduction and Clustering" % type(reducer).__name__)
         print(40 * '-')
