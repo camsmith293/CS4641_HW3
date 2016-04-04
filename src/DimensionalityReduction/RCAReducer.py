@@ -4,7 +4,7 @@ from sklearn.random_projection import GaussianRandomProjection
 from sklearn import metrics
 from sklearn.preprocessing import scale
 
-from scipy.statistics import var
+import numpy as np
 
 class RCAReducer():
 
@@ -52,7 +52,7 @@ class RCAReducer():
         points_along_dimension = self.reduced.T
         for i,points in enumerate(points_along_dimension):
             print("Variance of dimension %d:" % i)
-            print(var(points), "\n")
+            print(np.var(points), "\n")
 
     def display_reduced_iris(self):
         return
