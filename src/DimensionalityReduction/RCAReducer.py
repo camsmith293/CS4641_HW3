@@ -3,7 +3,7 @@ from time import time
 
 from sklearn.random_projection import GaussianRandomProjection
 from sklearn import metrics
-from sklearn.preprocessing import scale
+from sklearn.preprocessing import MinMaxScaler
 
 import numpy as np
 
@@ -12,14 +12,15 @@ class RCAReducer():
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
-        self.data = scale(dataset.data)
+        self.scaler = MinMaxScaler()
+        self.data = self.scaler.fit_transform(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
         self.reducer = GaussianRandomProjection(n_components=num_components)
 
     def reduce(self):
         self.reducer.fit(self.data)
-        self.reduced = scale(self.reducer.transform(self.data))
+        self.reduced = self.scaler.fit_transform(self.reducer.transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
