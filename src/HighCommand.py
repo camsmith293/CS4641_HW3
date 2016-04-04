@@ -53,4 +53,9 @@ def ICAReduce_digits():
     ica.reduce()
     ica.display_reduced_digits()
 
+def RCAReduce_digits():
+    rca = RCAReducer(digits, digits_name)
+    rca.reduce()
+    rca.display_reduced_digits()
+
 ICAReduce_digits()
