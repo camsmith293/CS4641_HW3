@@ -16,7 +16,7 @@ class PCAReducer():
         self.data = self.scaler.fit_transform(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
-        self.reducer = PCA(n_components=num_components, max_iter=5000)
+        self.reducer = PCA(n_components=num_components)
 
     def reduce(self):
         self.reducer.fit(self.data)
