@@ -1,3 +1,4 @@
+import sys
 from time import time
 
 from sklearn.random_projection import GaussianRandomProjection
@@ -39,6 +40,7 @@ class RCAReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
+        sys.stdout = open('RCAReduceDigitsOutput.txt', 'w')
         print("RCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
@@ -51,8 +53,9 @@ class RCAReducer():
     def compute_plane_variance(self):
         points_along_dimension = self.reduced.T
         for i,points in enumerate(points_along_dimension):
-            print("Variance of dimension %d:" % i)
-            print(np.var(points), "\n")
+            print(points)
+            print("\nVariance of dimension %d:" % i)
+            print(points.std() ** 2, "\n")
 
     def display_reduced_iris(self):
         return
