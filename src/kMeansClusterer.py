@@ -48,11 +48,9 @@ class kMeansClusterer():
             plt.xticks(())
             plt.yticks(())
 
-
         plt.suptitle('Centroids of KMeans Clustering of\n ' + self.dataset_name)
         plt.subplots_adjust(0.08, 0.02, 0.92, 0.85, 0.08, 0.23)
 
-        plt.show()
         plt.savefig(outfile)
 
     def display_iris_clusterings(self, outfile='kMeansIrisClusterings.png'):
@@ -74,7 +72,6 @@ class kMeansClusterer():
         ax.set_ylabel('Sepal length')
         ax.set_zlabel('Petal length')
 
-        plt.show()
         plt.savefig(outfile)
 
     def display_reduced_clusterings(self, reducer):

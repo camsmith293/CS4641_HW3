@@ -5,13 +5,12 @@ from sklearn.decomposition import PCA
 from sklearn import metrics
 from sklearn.preprocessing import MinMaxScaler
 
-import numpy as np
-
 class PCAReducer():
 
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
+        self.labels = dataset.target
         self.scaler = MinMaxScaler()
         self.data = self.scaler.fit_transform(dataset.data)
         self.n_samples, self.n_features = self.data.shape
@@ -25,8 +24,8 @@ class PCAReducer():
 
     def benchmark(self, estimator, name, data):
         t0 = time()
-        labels = data.target
         sample_size = 300
+        labels = self.labels
 
         estimator.fit(data)
         print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
@@ -41,7 +40,7 @@ class PCAReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
-        sys.stdout = open('PCAReduceDigitsOutput.txt', 'w')
+        sys.stdout = open('out/PCAReduceDigitsOutput.txt', 'w')
         print("PCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
@@ -56,7 +55,7 @@ class PCAReducer():
             print(self.reducer.transform(self.data[i]), "\n")
 
     def display_reduced_iris(self):
-        sys.stdout = open('PCAReduceIrisOutput.txt', 'w')
+        sys.stdout = open('out/PCAReduceIrisOutput.txt', 'w')
         print("PCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))

@@ -12,6 +12,7 @@ class RCAReducer():
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
+        self.labels = dataset.target
         self.scaler = MinMaxScaler()
         self.data = self.scaler.fit_transform(dataset.data)
         self.n_samples, self.n_features = self.data.shape
@@ -25,8 +26,8 @@ class RCAReducer():
 
     def benchmark(self, estimator, name, data):
         t0 = time()
-        labels = data.target
         sample_size = 300
+        labels = self.labels
 
         estimator.fit(data)
         print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
@@ -41,7 +42,7 @@ class RCAReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
-        sys.stdout = open('RCAReduceDigitsOutput.txt', 'w')
+        sys.stdout = open('out/RCAReduceDigitsOutput.txt', 'w')
         print("RCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
@@ -58,7 +59,7 @@ class RCAReducer():
             print(np.var(points), "\n")
 
     def display_reduced_iris(self):
-        sys.stdout = open('RCAReduceIrisOutput.txt', 'w')
+        sys.stdout = open('out/RCAReduceIrisOutput.txt', 'w')
         print("RCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))

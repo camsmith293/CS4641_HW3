@@ -10,6 +10,7 @@ class NMFReducer():
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
+        self.labels = dataset.target
         self.scaler = MinMaxScaler()
         self.data = self.scaler.fit_transform(dataset.data)
         self.n_samples, self.n_features = self.data.shape
@@ -23,8 +24,8 @@ class NMFReducer():
 
     def benchmark(self, estimator, name, data):
         t0 = time()
-        labels = data.target
         sample_size = 300
+        labels = self.labels
 
         estimator.fit(data)
         print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
@@ -39,7 +40,7 @@ class NMFReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
-        sys.stdout = open('NMFReduceDigitsOutput.txt', 'w')
+        sys.stdout = open('out/NMFReduceDigitsOutput.txt', 'w')
         print("NMF Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print(self.reduced)
@@ -49,7 +50,7 @@ class NMFReducer():
         print(self.reducer.reconstruction_err_)
 
     def display_reduced_iris(self):
-        sys.stdout = open('NMFReduceIrisOutput.txt', 'w')
+        sys.stdout = open('out/NMFReduceIrisOutput.txt', 'w')
         print("NMF Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print(self.reduced)
