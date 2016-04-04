@@ -82,10 +82,10 @@ class kMeansClusterer():
         out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'kMeans.png'
         self.cluster()
         self.display_clustering(out_img_pre)
-        reducer.benchmark(self, "Pre-Reduction", self.data)
+        reducer.benchmark(self.clusterer, "Pre-Reduction", self.data)
         print(40 * '-')
         self.reduce_data(reducer)
         out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'kMeans.png'
         self.display_clustering(out_img_pre)
-        reducer.benchmark(self, "Post-Reduction", self.data)
+        reducer.benchmark(self.clusterer, "Post-Reduction", self.data)
 
