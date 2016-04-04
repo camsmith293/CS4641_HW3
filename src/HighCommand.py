@@ -34,14 +34,10 @@ def EMClusterIris():
     EM.display_iris_clusterings()
 
 def reduce_digits():
-    reducers = [PCAReducer(digits, digits_name),
-                ICAReducer(digits, digits_name),
-                RCAReducer(digits, digits_name),
-                NMFReducer(digits, digits_name)]
-
-    for reducer in reducers:
-        reducer.reduce()
-        reducer.display_reduced_digits()
+    PCAReduce_digits()
+    ICAReduce_digits()
+    RCAReduce_digits()
+    NMFReduce_digits()
 
 def PCAReduce_digits():
     pca = PCAReducer(digits, digits_name)
@@ -58,4 +54,9 @@ def RCAReduce_digits():
     rca.reduce()
     rca.display_reduced_digits()
 
-RCAReduce_digits()
+def NMFReduce_digits():
+    nmf = NMFReducer(digits, digits_name)
+    nmf.reduce()
+    nmf.display_reduced_digits()
+
+NMFReduce_digits()
