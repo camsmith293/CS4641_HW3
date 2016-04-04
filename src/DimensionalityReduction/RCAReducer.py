@@ -4,6 +4,7 @@ from sklearn.random_projection import GaussianRandomProjection
 from sklearn import metrics
 from sklearn.preprocessing import scale
 
+from scipy.statistics import var
 
 class RCAReducer():
 
@@ -16,7 +17,8 @@ class RCAReducer():
         self.reducer = GaussianRandomProjection(n_components=num_components)
 
     def reduce(self):
-        self.reduced = self.reducer.fit_transform(self.data)
+        self.reducer.fit(self.data)
+        self.reduced = scale(self.reducer.transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
@@ -41,8 +43,16 @@ class RCAReducer():
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
-        print("Randomized matrix inputs projected on\n")
-        print(self.reducer.components_)
+        print("\nProjection axes:\n")
+        for i,axis in enumerate(self.reducer.components_.tolist()):
+            print("Axis %d:\n" % i, axis)
+        self.compute_plane_variance()
+
+    def compute_plane_variance(self):
+        points_along_dimension = self.reduced.T
+        for i,points in enumerate(points_along_dimension):
+            print("Variance of dimension %d:" % i)
+            print(var(points), "\n")
 
     def display_reduced_iris(self):
         return
