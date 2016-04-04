@@ -5,6 +5,7 @@ from sklearn.decomposition import FastICA
 from sklearn import metrics
 from sklearn.preprocessing import scale
 
+from scipy.stats import kurtosis
 
 class ICAReducer():
 
@@ -49,9 +50,13 @@ class ICAReducer():
         print("\nProjection axes:\n")
         for i,axis in enumerate(self.reducer.mixing_):
             print("Axis %d:\n" % i, axis)
-            
-    def compute_plane_kurtosity(self, plane):
-        print()
+        self.compute_plane_kurtoses()
+
+    def compute_plane_kurtoses(self):
+        points_along_dimension = self.reduced.T
+        for i,points in enumerate(points_along_dimension):
+            print("Kurtosis of dimension %d:" % i)
+            print(kurtosis(points), "\n")
 
     def display_reduced_iris(self):
         return
