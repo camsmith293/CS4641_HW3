@@ -16,7 +16,8 @@ class ICAReducer():
         self.reducer = FastICA(n_components=num_components)
 
     def reduce(self):
-        self.reduced = self.reducer.fit_transform(self.data)
+        self.reducer.fit(self.data)
+        self.reduced = scale(self.reducer.transform(self.data))
         return self.reduced
 
     def benchmark(self, estimator, name, data):
@@ -41,8 +42,10 @@ class ICAReducer():
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
-        print("Matrix used to unmix inputs\n")
-        print(self.reducer.components_)
+        print(40 * '-')
+        print("\nProjection axes:\n")
+        for i,axis in enumerate(self.reducer.mixing_):
+            print("Axis %d:\n" % i, axis)
 
     def display_reduced_iris(self):
         return

@@ -2,7 +2,7 @@ from time import time
 
 from sklearn.decomposition import NMF
 from sklearn import metrics
-from sklearn.preprocessing import scale
+from sklearn.preprocessing import MinMaxScaler
 
 
 class NMFReducer():
@@ -10,7 +10,7 @@ class NMFReducer():
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
         self.dataset_name = dataset_name
-        self.data = scale(dataset.data)
+        self.data = MinMaxScaler(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
         self.reducer = NMF(n_components=num_components)
