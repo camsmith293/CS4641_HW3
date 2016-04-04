@@ -27,6 +27,18 @@ class kMeansClusterer():
         self.data = self.scaler.fit_transform(reduced)
         # self.cluster()
 
+    def display_clustering(self, outfile=None):
+        if self.dataset_name is "Digits_Dataset":
+            if outfile is None:
+                self.display_digits_centroids()
+            else:
+                self.display_digits_centroids(outfile)
+        else:
+            if outfile is None:
+                self.display_iris_clusterings()
+            else:
+                self.display_iris_clusterings(outfile)
+
     def display_digits_centroids(self, outfile='kMeansDigitsClusterings.png'):
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
@@ -70,7 +82,12 @@ class kMeansClusterer():
         sys.stdout(filename)
         print("%s Reduction and Clustering" % type(reducer).__name__)
         print(40 * '-')
+        out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'kMeans.png'
+        self.display_clustering(out_img_pre)
         reducer.benchmark(self, "Pre-Reduction", self.data)
+        print(40 * '-')
         self.reduce_data(reducer)
+        out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'kMeans.png'
+        self.display_clustering(out_img_pre)
         reducer.benchmark(self, "Post-Reduction", self.data)
 

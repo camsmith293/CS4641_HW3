@@ -10,8 +10,8 @@ from DimensionalityReduction.NMFReducer import NMFReducer
 digits = load_digits()
 iris = load_iris()
 
-digits_name = "Digits Dataset"
-iris_name = "Iris Dataset"
+digits_name = "Digits_Dataset"
+iris_name = "Iris_Dataset"
 
 def kMeansClusterDigits():
     kMeans = kMeansClusterer(digits, 10, digits_name)
@@ -64,4 +64,4 @@ def kMeansDigitCluster_PCAReduce():
     pca = PCAReducer(digits, digits_name)
     kMeans.display_reduced_clusterings(pca)
 
-NMFReduce_digits()
+kMeansDigitCluster_PCAReduce()
