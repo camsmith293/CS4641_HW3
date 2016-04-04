@@ -58,4 +58,4 @@ def RCAReduce_digits():
     rca.reduce()
     rca.display_reduced_digits()
 
-ICAReduce_digits()
+RCAReduce_digits()
