@@ -1,3 +1,4 @@
+import sys
 from time import time
 
 from sklearn.decomposition import FastICA
@@ -13,7 +14,7 @@ class ICAReducer():
         self.data = scale(dataset.data)
         self.n_samples, self.n_features = self.data.shape
 
-        self.reducer = FastICA(n_components=num_components)
+        self.reducer = FastICA(n_components=num_components, max_iter=5000)
 
     def reduce(self):
         self.reducer.fit(self.data)
@@ -38,6 +39,7 @@ class ICAReducer():
                                           sample_size=sample_size)))
 
     def display_reduced_digits(self):
+        sys.stdout = open('ICAReduceDigitsOutput.txt', 'w')
         print("ICA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
