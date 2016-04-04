@@ -59,4 +59,9 @@ def NMFReduce_digits():
     nmf.reduce()
     nmf.display_reduced_digits()
 
+def kMeansDigitCluster_PCAReduce():
+    kMeans = kMeansClusterer(digits, 10, digits_name)
+    pca = PCAReducer(digits, digits_name)
+    kMeans.display_reduced_clusterings(pca)
+
 NMFReduce_digits()
