@@ -79,7 +79,7 @@ class kMeansClusterer():
 
     def display_reduced_clusterings(self, reducer):
         filename = "kMeans" + self.dataset_name + type(reducer).__name__ + "reduction.txt"
-        sys.stdout(filename)
+        sys.stdout = open(filename)
         print("%s Reduction and Clustering" % type(reducer).__name__)
         print(40 * '-')
         out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'kMeans.png'
