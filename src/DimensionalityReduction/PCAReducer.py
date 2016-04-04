@@ -5,6 +5,8 @@ from sklearn.decomposition import PCA
 from sklearn import metrics
 from sklearn.preprocessing import scale
 
+import numpy as np
+
 class PCAReducer():
 
     def __init__(self, dataset, dataset_name, num_components=10):
@@ -41,6 +43,7 @@ class PCAReducer():
         sys.stdout = open('PCAReduceDigitsOutput.txt', 'w')
         print("PCA Reduction of %s:\n" % self.dataset_name)
         print(40 * '-')
+        print(self.reduced)
         print("Length of 1 input vector before reduction: %d \n" % len(self.data.tolist()[0]))
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
         for i,component in enumerate(self.reducer.components_.tolist()):
@@ -51,6 +54,9 @@ class PCAReducer():
             print("\nInput %d:\n" % i)
             print(self.data[i], " ->\n")
             print(self.reducer.transform(self.data[i]), "\n")
+
+    def compute_plane_kurtosity(self, plane):
+        print()
 
     def display_reduced_iris(self):
         return
