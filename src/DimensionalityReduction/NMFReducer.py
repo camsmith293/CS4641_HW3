@@ -5,7 +5,7 @@ from sklearn.decomposition import NMF
 from sklearn import metrics
 from sklearn.preprocessing import MinMaxScaler
 
-class ICAReducer():
+class NMFReducer():
 
     def __init__(self, dataset, dataset_name, num_components=10):
         self.dataset = dataset
