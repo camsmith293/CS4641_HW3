@@ -60,7 +60,7 @@ class RCAReducer():
             sum = 0
             for point in points:
                 sum += (point - mean) ** 2
-            var = sum / len(points)
+            var = sum / len(points.tolist())
             print(var)
 
     def display_reduced_iris(self):
