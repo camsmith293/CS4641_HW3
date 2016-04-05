@@ -68,3 +68,9 @@ class PCAReducer():
             print("\nInput %d:\n" % i)
             print(self.data[i], " ->\n")
             print(self.reducer.transform(self.data[i]), "\n")
+
+    def reduce_crossvalidation_set(self, X_train, X_test):
+        self.reducer.fit(X_train)
+        reduced_X_train = self.scaler.transform(X_train)
+        reduced_X_test = self.scaler.transform(X_test)
+        return reduced_X_train, reduced_X_test

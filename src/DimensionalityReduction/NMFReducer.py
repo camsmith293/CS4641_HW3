@@ -58,3 +58,9 @@ class NMFReducer():
         print("Length of 1 input vector after reduction: %d \n" % len(self.reduced.tolist()[0]))
         print(40 * '-')
         print(self.reducer.reconstruction_err_)
+
+    def reduce_crossvalidation_set(self, X_train, X_test):
+        self.reducer.fit(X_train)
+        reduced_X_train = self.scaler.transform(X_train)
+        reduced_X_test = self.scaler.transform(X_test)
+        return reduced_X_train, reduced_X_test
