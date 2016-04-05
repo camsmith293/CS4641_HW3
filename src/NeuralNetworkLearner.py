@@ -25,7 +25,7 @@ class NeuralNetLearner:
 
         self.rbm = neural_network.BernoulliRBM(random_state=0, verbose=True)
         self.rbm.learning_rate = 0.06
-        self.rbm.n_iter = 20
+        self.rbm.n_iter = 100
         self.rbm.n_components = 64
 
         self.logistic = linear_model.LogisticRegression()
