@@ -1,0 +1,28 @@
+RCA Reduction of Iris_Dataset:
+
+----------------------------------------
+Length of 1 input vector before reduction: 4 
+
+Length of 1 input vector after reduction: 3 
+
+
+Projection axes:
+
+Axis 0:
+ [-0.37044086906987067, 0.4198070062223059, 0.21149256468094002, 0.17961142739088362]
+Axis 1:
+ [-0.36359217184834164, 0.517278432927797, -0.7167997360883385, -0.2512807738832151]
+Axis 2:
+ [-0.32606001759300185, 0.5828471540418392, 0.3733976613706799, 0.7948735051251223]
+
+Variance of dimension 0:
+0.0346478755108 
+
+
+Variance of dimension 1:
+0.0773147834587 
+
+
+Variance of dimension 2:
+0.060638560925 
+
