@@ -1,0 +1,70 @@
+PCAReducer Reduction and Clustering
+----------------------------------------
+Expectation-maximization algorithm started.
+Initialization 1
+	EM iteration 1
+	EM iteration 2
+	EM iteration 3
+	EM iteration 4
+	EM iteration 5
+	EM iteration 6
+	EM iteration 7
+	EM iteration 8
+	EM iteration 9
+	EM iteration 10
+	EM iteration 11
+	EM iteration 12
+	EM iteration 13
+	EM iteration 14
+	EM iteration 15
+	EM iteration 16
+	EM iteration 17
+	EM iteration 18
+	EM iteration 19
+	EM iteration 20
+	EM iteration 21
+	EM iteration 22
+	EM iteration 23
+	EM iteration 24
+	EM iteration 25
+	EM iteration 26
+		EM algorithm converged.
+[[ 0.      0.      0.3125 ...,  0.      0.      0.    ]
+ [ 0.      0.      0.     ...,  0.625   0.      0.    ]
+ [ 0.      0.      0.     ...,  1.      0.5625  0.    ]
+ ..., 
+ [ 0.      0.      0.0625 ...,  0.375   0.      0.    ]
+ [ 0.      0.      0.125  ...,  0.75    0.      0.    ]
+ [ 0.      0.      0.625  ...,  0.75    0.0625  0.    ]]
+Expectation-maximization algorithm started.
+Initialization 1
+	EM iteration 1
+	EM iteration 2
+	EM iteration 3
+	EM iteration 4
+	EM iteration 5
+	EM iteration 6
+	EM iteration 7
+	EM iteration 8
+	EM iteration 9
+	EM iteration 10
+	EM iteration 11
+	EM iteration 12
+	EM iteration 13
+	EM iteration 14
+		EM algorithm converged.
+AIC Score:-178412
+BIC Score:-171330
+----------------------------------------
+Expectation-maximization algorithm started.
+Initialization 1
+	EM iteration 1
+	EM iteration 2
+	EM iteration 3
+	EM iteration 4
+	EM iteration 5
+	EM iteration 6
+	EM iteration 7
+	EM iteration 8
+	EM iteration 9
+		EM algorithm converged.
