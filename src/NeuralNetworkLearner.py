@@ -87,7 +87,7 @@ class NeuralNetLearner:
         self.X_test = np.append(self.X_test,np.zeros([len(self.X_test),1]),1)
 
         self.rbm.n_components += 1
-        clusterer.data = self.X_train + self.X_test
+        clusterer.data = np.stack((self.X_train, self.X_test))
 
         clusterer.cluster()
 
