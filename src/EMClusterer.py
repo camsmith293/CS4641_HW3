@@ -92,6 +92,8 @@ class EMClusterer():
         self.benchmark("Pre-Reduction")
         print(40 * '-')
         self.reduce_data(reducer)
+        self.clusterer = GMM(n_components=self.num_clusters,
+                    covariance_type='diag', init_params='wc', n_iter=500, verbose=1)
         out_img_pre = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
         self.display_clustering(out_img_pre)
         self.benchmark("Post-Reduction")
