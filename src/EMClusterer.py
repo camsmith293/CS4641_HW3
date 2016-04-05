@@ -1,7 +1,10 @@
+from time import time
+
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.mixture import GMM
 from sklearn.preprocessing import MinMaxScaler
+from sklearn import metrics
 
 import matplotlib.pyplot as plt
 
@@ -15,6 +18,7 @@ class EMClusterer():
         self.scaler = MinMaxScaler()
 
         self.data = self.scaler.fit_transform(self.dataset.data)
+        self.labels = dataset.target
 
         self.clusterer = GMM(n_components=num_clusters,
                     covariance_type='diag', init_params='wc', n_iter=500, verbose=1)
@@ -23,7 +27,7 @@ class EMClusterer():
         for index, (name, clusterer) in enumerate(self.clusterers.items()):
             print("Fitting dataset using covariance type ", clusterer.covariance_type)
             clusterer.n_iter=iterations
-            clusterer.fit(self.X_train)
+            clusterer.fit(self.data)
 
     def reduce_and_cluster(self, reducer):
         reduced = reducer.reduce()
@@ -68,3 +72,20 @@ class EMClusterer():
         ax.set_zlabel('Petal length')
 
         plt.savefig(outfile)
+
+    def benchmark(self, estimator, name, data):
+        t0 = time()
+        sample_size = 300
+        labels = self.labels
+
+        estimator.fit(data)
+        print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
+              % (name, (time() - t0), estimator.inertia_,
+                 metrics.homogeneity_score(labels, estimator.labels_),
+                 metrics.completeness_score(labels, estimator.labels_),
+                 metrics.v_measure_score(labels, estimator.labels_),
+                 metrics.adjusted_rand_score(labels, estimator.labels_),
+                 metrics.adjusted_mutual_info_score(labels,  estimator.labels_),
+                 metrics.silhouette_score(data, estimator.labels_,
+                                          metric='euclidean',
+                                          sample_size=sample_size)))

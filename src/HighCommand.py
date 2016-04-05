@@ -17,21 +17,25 @@ iris_name = "Iris_Dataset"
 def kMeansClusterDigits():
     kMeans = kMeansClusterer(digits, 10, digits_name)
     kMeans.cluster()
+    kMeans.benchmark()
     kMeans.display_digits_centroids()
 
 def EMClusterDigits():
     EM = EMClusterer(digits, 10, digits_name)
     EM.cluster()
+    EM.benchmark()
     EM.display_digits_centroids()
 
 def kMeansClusterIris():
     kMeans = kMeansClusterer(iris, 3, iris_name)
     kMeans.cluster()
+    kMeans.benchmark()
     kMeans.display_iris_clusterings()
 
 def EMClusterIris():
     EM = EMClusterer(iris, 3, iris_name)
     EM.cluster()
+    EM.benchmark()
     EM.display_iris_clusterings()
 
 def reduce_digits():

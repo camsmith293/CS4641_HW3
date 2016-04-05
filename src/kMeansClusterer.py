@@ -1,6 +1,8 @@
 import sys
+from time import time
 
 from mpl_toolkits.mplot3d import Axes3D
+from sklearn import metrics
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 
@@ -15,6 +17,7 @@ class kMeansClusterer():
         self.dataset_name = dataset_name
         self.scaler = MinMaxScaler()
         self.data = self.scaler.fit_transform(self.dataset.data)
+        self.labels = dataset.target
 
         self.clusterer = KMeans(n_clusters=self.num_clusters, verbose=1)
 
@@ -95,4 +98,21 @@ class kMeansClusterer():
         for i,x in enumerate(appended):
             x[-1] = self.clusterer.labels_[i]
         return appended
+
+    def benchmark(self, estimator, name, data):
+        t0 = time()
+        sample_size = 300
+        labels = self.labels
+
+        estimator.fit(data)
+        print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
+              % (name, (time() - t0), estimator.inertia_,
+                 metrics.homogeneity_score(labels, estimator.labels_),
+                 metrics.completeness_score(labels, estimator.labels_),
+                 metrics.v_measure_score(labels, estimator.labels_),
+                 metrics.adjusted_rand_score(labels, estimator.labels_),
+                 metrics.adjusted_mutual_info_score(labels,  estimator.labels_),
+                 metrics.silhouette_score(data, estimator.labels_,
+                                          metric='euclidean',
+                                          sample_size=sample_size)))
 
