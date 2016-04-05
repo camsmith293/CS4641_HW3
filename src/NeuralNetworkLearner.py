@@ -76,7 +76,7 @@ class NeuralNetLearner:
         self.evaluate()
 
     def add_cluster_feature(self, clusterer_1, clusterer_2):
-        outfile = 'out/NeuralNet' + type(clusterer).__name__ + 'FeatureOutput.txt'
+        outfile = 'out/NeuralNetFeatureOutput.txt'
         sys.stdout = open(outfile, 'w')
 
         # Pre expansion
