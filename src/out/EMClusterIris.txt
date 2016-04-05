@@ -9,3 +9,5 @@ Initialization 1
 	EM iteration 7
 	EM iteration 8
 		EM algorithm converged.
+AIC Score:-755
+BIC Score:-676
