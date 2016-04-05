@@ -71,5 +71,6 @@ class NeuralNetLearner:
 
         # Reduce
         self.X_train, self.X_test = reducer.reduce_crossvalidation_set(self.X_train, self.X_test)
+        self.rbm.n_components = len(self.X_train[0])
         self.train()
         self.evaluate()
