@@ -89,3 +89,10 @@ class kMeansClusterer():
         self.display_clustering(out_img_pre)
         reducer.benchmark(self.clusterer, "Post-Reduction", self.data)
 
+    def append_with_clustering(self):
+        self.cluster()
+        appended = np.append(self.data, np.zeros([len(self.data),1]),1)
+        for i,x in enumerate(appended):
+            x[-1] = self.clusterer.labels_[i]
+        return appended
+
