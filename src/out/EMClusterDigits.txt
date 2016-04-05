@@ -24,9 +24,6 @@ Initialization 1
 	EM iteration 22
 	EM iteration 23
 	EM iteration 24
-	EM iteration 25
-	EM iteration 26
-	EM iteration 27
 		EM algorithm converged.
 AIC Score:-178418
-BIC Score:-171337
+BIC Score:-171336
