@@ -25,4 +25,5 @@ Initialization 1
 	EM iteration 23
 	EM iteration 24
 	EM iteration 25
+	EM iteration 26
 		EM algorithm converged.
