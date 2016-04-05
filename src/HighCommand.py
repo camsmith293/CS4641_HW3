@@ -153,7 +153,7 @@ def EMIrisCluster_AllReductions():
                 NMFReducer(iris, iris_name, num_components=3)]
 
     for reducer in reducers:
-        EM = kMeansClusterer(iris, 3, iris_name)
+        EM = EMClusterer(iris, 3, iris_name)
         EM.display_reduced_clusterings(reducer)
 
 def NeuralNet_PCAReduction():
