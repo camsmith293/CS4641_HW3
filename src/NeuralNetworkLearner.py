@@ -86,6 +86,9 @@ class NeuralNetLearner:
         self.X_train = np.append(self.X_train,np.zeros([len(self.X_train),1]),1)
         self.X_test = np.append(self.X_test,np.zeros([len(self.X_test),1]),1)
 
+        self.rbm.n_components += 1
+        clusterer.data = self.X_train + self.X_test
+
         clusterer.cluster()
 
         # Add cluster feature
@@ -94,8 +97,6 @@ class NeuralNetLearner:
 
         for x in self.X_test:
             x[-1] = clusterer.clusterer.transform(x)
-
-        self.rbm.n_components += 1
 
         # Pre expansion
         self.train()
