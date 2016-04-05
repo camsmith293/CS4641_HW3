@@ -95,6 +95,8 @@ class NeuralNetLearner:
         # Add cluster feature
         for i,x in enumerate(self.X_train):
             x[-1] = train_labels[i]
+            print(train_labels[i])
+            print(self.Y_train[i])
 
         for i,x in enumerate(self.X_test):
             x[-1] = test_labels[i]
