@@ -157,4 +157,4 @@ Length of 1 input vector before reduction: 4
 Length of 1 input vector after reduction: 3 
 
 ----------------------------------------
-0.6063961725279684
+0.6063961725279685
