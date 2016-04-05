@@ -70,6 +70,32 @@ def NMFReduce_digits():
     nmf.reduce()
     nmf.display_reduced_digits()
 
+def reduce_iris():
+    PCAReduce_iris()
+    ICAReduce_iris()
+    RCAReduce_iris()
+    NMFReduce_iris()
+
+def PCAReduce_iris():
+    pca = PCAReducer(iris, iris_name, num_components=3)
+    pca.reduce()
+    pca.display_reduced_iris()
+
+def ICAReduce_iris():
+    ica = ICAReducer(iris, iris_name, num_components=3)
+    ica.reduce()
+    ica.display_reduced_iris()
+
+def RCAReduce_iris():
+    rca = RCAReducer(iris, iris_name, num_components=3)
+    rca.reduce()
+    rca.display_reduced_iris()
+
+def NMFReduce_iris():
+    nmf = NMFReducer(iris, iris_name, num_components=3)
+    nmf.reduce()
+    nmf.display_reduced_iris()
+
 def kMeansDigitCluster_PCAReduce():
     kMeans = kMeansClusterer(digits, 10, digits_name)
     pca = PCAReducer(digits, digits_name)
@@ -120,5 +146,4 @@ def kMeansClusterFeature_NeuralNet():
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
 
-EMClusterDigits()
-EMClusterIris()
+reduce_iris()
