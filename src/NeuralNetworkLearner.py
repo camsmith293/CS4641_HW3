@@ -63,7 +63,7 @@ class NeuralNetLearner:
 
     def reduce_train(self, reducer):
         outfile = 'out/NeuralNet' + type(reducer).__name__ + 'ReductionOutput.txt'
-        sys.stdout = open(outfile)
+        sys.stdout = open(outfile, 'w')
 
         # Pre reduction
         self.train()
