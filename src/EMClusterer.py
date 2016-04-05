@@ -97,6 +97,7 @@ class EMClusterer():
         self.benchmark("Post-Reduction")
 
     def benchmark(self, name):
+        print(self.data)
         self.clusterer.fit(self.data)
         print("AIC Score:%d" % self.clusterer.aic(self.data))
         print("BIC Score:%d" % self.clusterer.bic(self.data))
