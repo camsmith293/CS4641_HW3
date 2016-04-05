@@ -80,15 +80,13 @@ def kMeansDigitCluster_NMFReduce():
     kMeans.display_reduced_clusterings(nmf)
 
 def kMeansDigitCluster_AllReductions():
-    kMeans = kMeansClusterer(digits, 10, digits_name)
-    pca = PCAReducer(digits, digits_name)
-    ica = ICAReducer(digits, digits_name)
-    rca = RCAReducer(digits, digits_name)
-    nmf = NMFReducer(digits, digits_name)
-    kMeans.display_reduced_clusterings(pca)
-    kMeans.display_reduced_clusterings(ica)
-    kMeans.display_reduced_clusterings(rca)
-    kMeans.display_reduced_clusterings(nmf)
+    reducers = [PCAReducer(digits, digits_name),
+                ICAReducer(digits, digits_name),
+                RCAReducer(digits, digits_name),
+                NMFReducer(digits, digits_name)]
 
+    for reducer in reducers:
+        kMeans = kMeansClusterer(digits, 10, digits_name)
+        kMeans.display_reduced_clusterings(reducer)
 
 kMeansDigitCluster_AllReductions()
