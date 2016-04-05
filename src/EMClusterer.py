@@ -89,7 +89,7 @@ class EMClusterer():
         out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'EM.png'
         self.cluster()
         self.display_clustering(out_img_pre)
-        reducer.benchmark(self.clusterer, "Pre-Reduction", self.data)
+        self.benchmark("Pre-Reduction")
         print(40 * '-')
         self.reduce_data(reducer)
         out_img_pre = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
