@@ -64,8 +64,8 @@ class kMeansClusterer():
 
         X = self.data
         labels = self.clusterer.labels_
-
-        ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float))
+        max_dim = len(X[0]) - 1
+        ax.scatter(X[:, max_dim], X[:, 0], X[:, 2], c=labels.astype(np.float))
 
         ax.w_xaxis.set_ticklabels([])
         ax.w_yaxis.set_ticklabels([])
