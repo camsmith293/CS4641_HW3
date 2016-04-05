@@ -42,7 +42,7 @@ class kMeansClusterer():
             else:
                 self.display_iris_clusterings(outfile)
 
-    def display_digits_centroids(self, outfile='kMeansDigitsClusterings.png'):
+    def display_digits_centroids(self, outfile='out/kMeansDigitsClusterings.png'):
         plt.figure(figsize=(4.2, 4))
         for i, patch in enumerate(self.clusterer.cluster_centers_):
             plt.subplot(10, 10, i + 1)
@@ -56,7 +56,7 @@ class kMeansClusterer():
 
         plt.savefig(outfile)
 
-    def display_iris_clusterings(self, outfile='kMeansIrisClusterings.png'):
+    def display_iris_clusterings(self, outfile='out/kMeansIrisClusterings.png'):
         fig = plt.figure(figsize=(4, 3))
         plt.clf()
         ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
