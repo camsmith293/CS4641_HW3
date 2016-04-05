@@ -31,7 +31,7 @@ class EMClusterer():
         self.data = self.scaler.fit_transform(reduced)
         self.cluster()
 
-    def display_digits_centroids(self, outfile='EMDigitsClusterings.png'):
+    def display_digits_centroids(self, outfile='out/EMDigitsClusterings.png'):
         fig = plt.figure(figsize=(4.2, 4))
 
         w = 0.08
@@ -49,7 +49,7 @@ class EMClusterer():
 
         plt.savefig(outfile)
 
-    def display_iris_clusterings(self, outfile='EMIrisClusterings.png'):
+    def display_iris_clusterings(self, outfile='out/EMIrisClusterings.png'):
         fig = plt.figure(figsize=(4, 3))
         plt.clf()
         ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
