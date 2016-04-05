@@ -1,0 +1,277 @@
+ICAReducer Reduction and Clustering
+----------------------------------------
+Initialization complete
+Iteration  0, inertia 8.867
+Iteration  1, inertia 7.235
+Iteration  2, inertia 7.200
+Iteration  3, inertia 7.183
+Iteration  4, inertia 7.169
+Iteration  5, inertia 7.152
+Iteration  6, inertia 7.139
+Converged at iteration 6
+Initialization complete
+Iteration  0, inertia 10.863
+Iteration  1, inertia 7.179
+Iteration  2, inertia 7.054
+Iteration  3, inertia 7.003
+Iteration  4, inertia 6.998
+Converged at iteration 4
+Initialization complete
+Iteration  0, inertia 13.958
+Iteration  1, inertia 7.476
+Iteration  2, inertia 7.078
+Iteration  3, inertia 7.016
+Iteration  4, inertia 6.998
+Converged at iteration 4
+Initialization complete
+Iteration  0, inertia 11.534
+Iteration  1, inertia 7.027
+Iteration  2, inertia 7.003
+Iteration  3, inertia 6.998
+Converged at iteration 3
+Initialization complete
+Iteration  0, inertia 12.002
+Iteration  1, inertia 7.482
+Iteration  2, inertia 7.026
+Iteration  3, inertia 6.998
+Converged at iteration 3
+Initialization complete
+Iteration  0, inertia 12.979
+Iteration  1, inertia 7.676
+Iteration  2, inertia 7.331
+Iteration  3, inertia 7.233
+Iteration  4, inertia 7.200
+Iteration  5, inertia 7.183
+Iteration  6, inertia 7.169
+Iteration  7, inertia 7.152
+Iteration  8, inertia 7.139
+Converged at iteration 8
+Initialization complete
+Iteration  0, inertia 13.442
+Iteration  1, inertia 8.375
+Iteration  2, inertia 7.278
+Iteration  3, inertia 7.074
+Iteration  4, inertia 7.003
+Iteration  5, inertia 6.998
+Converged at iteration 5
+Initialization complete
+Iteration  0, inertia 12.996
+Iteration  1, inertia 7.832
+Iteration  2, inertia 7.151
+Iteration  3, inertia 7.036
+Iteration  4, inertia 7.003
+Iteration  5, inertia 6.998
+Converged at iteration 5
+Initialization complete
+Iteration  0, inertia 10.448
+Iteration  1, inertia 8.201
+Iteration  2, inertia 7.278
+Iteration  3, inertia 7.074
+Iteration  4, inertia 7.003
+Iteration  5, inertia 6.998
+Converged at iteration 5
+Initialization complete
+Iteration  0, inertia 8.332
+Iteration  1, inertia 7.016
+Iteration  2, inertia 6.998
+Converged at iteration 2
+Initialization complete
+Iteration  0, inertia 14.173
+Iteration  1, inertia 7.927
+Iteration  2, inertia 7.121
+Iteration  3, inertia 7.002
+Iteration  4, inertia 6.998
+Converged at iteration 4
+Initialization complete
+Iteration  0, inertia 22.847
+Iteration  1, inertia 7.431
+Iteration  2, inertia 7.147
+Iteration  3, inertia 7.134
+Converged at iteration 3
+Initialization complete
+Iteration  0, inertia 9.388
+Iteration  1, inertia 7.244
+Iteration  2, inertia 7.200
+Iteration  3, inertia 7.183
+Iteration  4, inertia 7.169
+Iteration  5, inertia 7.152
+Iteration  6, inertia 7.139
+Converged at iteration 6
+Initialization complete
+Iteration  0, inertia 13.821
+Iteration  1, inertia 9.921
+Iteration  2, inertia 7.147
+Iteration  3, inertia 7.016
+Iteration  4, inertia 6.998
+Converged at iteration 4
+Initialization complete
+Iteration  0, inertia 8.789
+Iteration  1, inertia 7.409
+Iteration  2, inertia 7.233
+Iteration  3, inertia 7.200
+Iteration  4, inertia 7.183
+Iteration  5, inertia 7.169
+Iteration  6, inertia 7.152
+Iteration  7, inertia 7.139
+Converged at iteration 7
+Initialization complete
+Iteration  0, inertia 9.857
+Iteration  1, inertia 7.018
+Iteration  2, inertia 7.002
+Iteration  3, inertia 6.998
+Converged at iteration 3
+Initialization complete
+Iteration  0, inertia 9.244
+Iteration  1, inertia 7.192
+Iteration  2, inertia 7.101
+Iteration  3, inertia 7.073
+Iteration  4, inertia 7.027
+Iteration  5, inertia 7.002
+Iteration  6, inertia 6.998
+Converged at iteration 6
+Initialization complete
+Iteration  0, inertia 12.947
+Iteration  1, inertia 7.094
+Iteration  2, inertia 7.016
+Iteration  3, inertia 6.998
+Converged at iteration 3
+Initialization complete
+Iteration  0, inertia 8.761
+Iteration  1, inertia 7.371
+Iteration  2, inertia 7.233
+Iteration  3, inertia 7.200
+Iteration  4, inertia 7.183
+Iteration  5, inertia 7.169
+Iteration  6, inertia 7.152
+Iteration  7, inertia 7.139
+Converged at iteration 7
+Initialization complete
+Iteration  0, inertia 13.364
+Iteration  1, inertia 11.118
+Iteration  2, inertia 11.091
+Iteration  3, inertia 11.014
+Iteration  4, inertia 10.956
+Iteration  5, inertia 10.937
+Iteration  6, inertia 10.931
+Iteration  7, inertia 10.926
+Iteration  8, inertia 10.917
+Iteration  9, inertia 10.908
+Converged at iteration 9
+Pre-Reduction   0.01s    6   0.736   0.747   0.742   0.716   0.733    0.504
+----------------------------------------
+Initialization complete
+Iteration  0, inertia 11.643
+Iteration  1, inertia 9.772
+Iteration  2, inertia 9.537
+Iteration  3, inertia 9.428
+Iteration  4, inertia 9.233
+Iteration  5, inertia 9.100
+Iteration  6, inertia 8.926
+Iteration  7, inertia 8.826
+Iteration  8, inertia 8.789
+Iteration  9, inertia 8.781
+Converged at iteration 9
+Initialization complete
+Iteration  0, inertia 15.123
+Iteration  1, inertia 9.915
+Iteration  2, inertia 9.680
+Iteration  3, inertia 9.505
+Iteration  4, inertia 9.380
+Iteration  5, inertia 9.291
+Iteration  6, inertia 9.236
+Iteration  7, inertia 9.148
+Iteration  8, inertia 9.095
+Iteration  9, inertia 9.092
+Iteration 10, inertia 9.076
+Iteration 11, inertia 9.069
+Iteration 12, inertia 9.065
+Converged at iteration 12
+Initialization complete
+Iteration  0, inertia 12.815
+Iteration  1, inertia 9.863
+Iteration  2, inertia 9.657
+Iteration  3, inertia 9.561
+Iteration  4, inertia 9.450
+Iteration  5, inertia 9.322
+Iteration  6, inertia 9.213
+Iteration  7, inertia 9.030
+Iteration  8, inertia 8.904
+Iteration  9, inertia 8.812
+Iteration 10, inertia 8.782
+Iteration 11, inertia 8.779
+Converged at iteration 11
+Initialization complete
+Iteration  0, inertia 13.336
+Iteration  1, inertia 9.269
+Iteration  2, inertia 9.159
+Iteration  3, inertia 8.975
+Iteration  4, inertia 8.858
+Iteration  5, inertia 8.812
+Iteration  6, inertia 8.782
+Iteration  7, inertia 8.779
+Converged at iteration 7
+Initialization complete
+Iteration  0, inertia 15.029
+Iteration  1, inertia 8.978
+Iteration  2, inertia 8.785
+Iteration  3, inertia 8.776
+Iteration  4, inertia 8.768
+Iteration  5, inertia 8.766
+Iteration  6, inertia 8.763
+Converged at iteration 6
+Initialization complete
+Iteration  0, inertia 10.119
+Iteration  1, inertia 8.781
+Converged at iteration 1
+Initialization complete
+Iteration  0, inertia 12.966
+Iteration  1, inertia 9.817
+Iteration  2, inertia 9.623
+Iteration  3, inertia 9.505
+Iteration  4, inertia 9.380
+Iteration  5, inertia 9.291
+Iteration  6, inertia 9.236
+Iteration  7, inertia 9.148
+Iteration  8, inertia 9.095
+Iteration  9, inertia 9.092
+Iteration 10, inertia 9.076
+Iteration 11, inertia 9.069
+Iteration 12, inertia 9.065
+Converged at iteration 12
+Initialization complete
+Iteration  0, inertia 13.686
+Iteration  1, inertia 9.182
+Iteration  2, inertia 8.927
+Iteration  3, inertia 8.808
+Iteration  4, inertia 8.782
+Iteration  5, inertia 8.779
+Converged at iteration 5
+Initialization complete
+Iteration  0, inertia 11.352
+Iteration  1, inertia 9.365
+Iteration  2, inertia 9.302
+Iteration  3, inertia 9.231
+Iteration  4, inertia 9.153
+Iteration  5, inertia 8.904
+Iteration  6, inertia 8.812
+Iteration  7, inertia 8.782
+Iteration  8, inertia 8.779
+Converged at iteration 8
+Initialization complete
+Iteration  0, inertia 15.096
+Iteration  1, inertia 9.609
+Iteration  2, inertia 9.566
+Iteration  3, inertia 9.495
+Iteration  4, inertia 9.441
+Iteration  5, inertia 9.397
+Iteration  6, inertia 9.391
+Iteration  7, inertia 9.360
+Iteration  8, inertia 9.300
+Iteration  9, inertia 9.218
+Iteration 10, inertia 8.997
+Iteration 11, inertia 8.904
+Iteration 12, inertia 8.812
+Iteration 13, inertia 8.782
+Iteration 14, inertia 8.779
+Converged at iteration 14
+Post-Reduction   0.02s    8   0.670   0.679   0.675   0.633   0.666    0.423
