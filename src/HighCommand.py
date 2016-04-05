@@ -64,4 +64,31 @@ def kMeansDigitCluster_PCAReduce():
     pca = PCAReducer(digits, digits_name)
     kMeans.display_reduced_clusterings(pca)
 
-kMeansDigitCluster_PCAReduce()
+def kMeansDigitCluster_ICAReduce():
+    kMeans = kMeansClusterer(digits, 10, digits_name)
+    ica = PCAReducer(digits, digits_name)
+    kMeans.display_reduced_clusterings(ica)
+
+def kMeansDigitCluster_RCAReduce():
+    kMeans = kMeansClusterer(digits, 10, digits_name)
+    rca = RCAReducer(digits, digits_name)
+    kMeans.display_reduced_clusterings(rca)
+
+def kMeansDigitCluster_NMFReduce():
+    kMeans = kMeansClusterer(digits, 10, digits_name)
+    nmf = NMFReducer(digits, digits_name)
+    kMeans.display_reduced_clusterings(nmf)
+
+def kMeansDigitCluster_AllReductions():
+    kMeans = kMeansClusterer(digits, 10, digits_name)
+    pca = PCAReducer(digits, digits_name)
+    ica = ICAReducer(digits, digits_name)
+    rca = RCAReducer(digits, digits_name)
+    nmf = NMFReducer(digits, digits_name)
+    kMeans.display_reduced_clusterings(pca)
+    kMeans.display_reduced_clusterings(ica)
+    kMeans.display_reduced_clusterings(rca)
+    kMeans.display_reduced_clusterings(nmf)
+
+
+kMeansDigitCluster_AllReductions()
