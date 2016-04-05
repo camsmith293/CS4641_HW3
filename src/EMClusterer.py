@@ -94,7 +94,7 @@ class EMClusterer():
         self.reduce_data(reducer)
         out_img_pre = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
         self.display_clustering(out_img_pre)
-        reducer.benchmark(self.clusterer, "Post-Reduction", self.data)
+        self.benchmark("Post-Reduction")
 
     def benchmark(self, name):
         print("AIC Score:%d" % self.clusterer.aic(self.data))
