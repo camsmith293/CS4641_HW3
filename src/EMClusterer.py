@@ -24,10 +24,8 @@ class EMClusterer():
                     covariance_type='diag', init_params='wc', n_iter=500, verbose=1)
 
     def cluster(self, iterations=500):
-        for index, (name, clusterer) in enumerate(self.clusterers.items()):
-            print("Fitting dataset using covariance type ", clusterer.covariance_type)
-            clusterer.n_iter=iterations
-            clusterer.fit(self.data)
+        self.clusterer.n_iter=iterations
+        self.clusterer.fit(self.data)
 
     def reduce_and_cluster(self, reducer):
         reduced = reducer.reduce()
