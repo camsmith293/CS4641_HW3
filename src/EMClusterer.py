@@ -5,6 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from sklearn.mixture import GMM
 from sklearn.preprocessing import MinMaxScaler
 
+import numpy as np
 import matplotlib.pyplot as plt
 
 class EMClusterer():
