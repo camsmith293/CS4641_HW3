@@ -79,27 +79,18 @@ class NeuralNetLearner:
         outfile = 'out/NeuralNet' + type(clusterer).__name__ + 'FeatureOutput.txt'
         sys.stdout = open(outfile, 'w')
 
-        # # Pre expansion
-        # self.train()
-        # self.evaluate()
+        # Pre expansion
+        self.train()
+        self.evaluate()
 
-        clusterer.clusterer.fit(self.X_train)
-        train_labels = clusterer.clusterer.predict(self.X_train)
-        test_labels = clusterer.clusterer.predict(self.X_train)
-
-        self.X_train = np.append(self.X_train,np.zeros([len(self.X_train),1]),1)
-        self.X_test = np.append(self.X_test,np.zeros([len(self.X_test),1]),1)
+        appended = clusterer.append_with_clustering()
 
         self.rbm.n_components += 1
-
-        # Add cluster feature
-        for i,x in enumerate(self.X_train):
-            x[-1] = train_labels[i]
-            # print(train_labels[i])
-            # print(self.Y_train[i])
-
-        for i,x in enumerate(self.X_test):
-            x[-1] = test_labels[i]
+        self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(appended, self.Y,
+                                                                                test_size=0.3,
+                                                                                random_state=0)
+        self.X_train = self.scaler.fit_transform(self.X_train)
+        self.X_test = self.scaler.fit_transform(self.X_test)
 
         # Post expansion
         self.train()
