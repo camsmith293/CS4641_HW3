@@ -1,0 +1,455 @@
+[BernoulliRBM] Iteration 1, pseudo-likelihood = -27.61, time = 0.11s
+[BernoulliRBM] Iteration 2, pseudo-likelihood = -27.92, time = 0.14s
+[BernoulliRBM] Iteration 3, pseudo-likelihood = -27.51, time = 0.09s
+[BernoulliRBM] Iteration 4, pseudo-likelihood = -26.16, time = 0.10s
+[BernoulliRBM] Iteration 5, pseudo-likelihood = -25.10, time = 0.08s
+[BernoulliRBM] Iteration 6, pseudo-likelihood = -23.99, time = 0.10s
+[BernoulliRBM] Iteration 7, pseudo-likelihood = -23.44, time = 0.17s
+[BernoulliRBM] Iteration 8, pseudo-likelihood = -23.13, time = 0.09s
+[BernoulliRBM] Iteration 9, pseudo-likelihood = -22.86, time = 0.10s
+[BernoulliRBM] Iteration 10, pseudo-likelihood = -22.83, time = 0.09s
+[BernoulliRBM] Iteration 11, pseudo-likelihood = -22.42, time = 0.10s
+[BernoulliRBM] Iteration 12, pseudo-likelihood = -22.24, time = 0.14s
+[BernoulliRBM] Iteration 13, pseudo-likelihood = -22.64, time = 0.10s
+[BernoulliRBM] Iteration 14, pseudo-likelihood = -21.80, time = 0.08s
+[BernoulliRBM] Iteration 15, pseudo-likelihood = -22.14, time = 0.08s
+[BernoulliRBM] Iteration 16, pseudo-likelihood = -21.96, time = 0.08s
+[BernoulliRBM] Iteration 17, pseudo-likelihood = -21.63, time = 0.08s
+[BernoulliRBM] Iteration 18, pseudo-likelihood = -21.44, time = 0.10s
+[BernoulliRBM] Iteration 19, pseudo-likelihood = -21.37, time = 0.13s
+[BernoulliRBM] Iteration 20, pseudo-likelihood = -21.25, time = 0.10s
+[BernoulliRBM] Iteration 21, pseudo-likelihood = -21.06, time = 0.08s
+[BernoulliRBM] Iteration 22, pseudo-likelihood = -20.96, time = 0.10s
+[BernoulliRBM] Iteration 23, pseudo-likelihood = -20.87, time = 0.09s
+[BernoulliRBM] Iteration 24, pseudo-likelihood = -20.76, time = 0.09s
+[BernoulliRBM] Iteration 25, pseudo-likelihood = -20.90, time = 0.13s
+[BernoulliRBM] Iteration 26, pseudo-likelihood = -20.68, time = 0.09s
+[BernoulliRBM] Iteration 27, pseudo-likelihood = -20.29, time = 0.08s
+[BernoulliRBM] Iteration 28, pseudo-likelihood = -20.58, time = 0.11s
+[BernoulliRBM] Iteration 29, pseudo-likelihood = -20.61, time = 0.08s
+[BernoulliRBM] Iteration 30, pseudo-likelihood = -20.34, time = 0.10s
+[BernoulliRBM] Iteration 31, pseudo-likelihood = -20.13, time = 0.14s
+[BernoulliRBM] Iteration 32, pseudo-likelihood = -20.04, time = 0.10s
+[BernoulliRBM] Iteration 33, pseudo-likelihood = -19.98, time = 0.09s
+[BernoulliRBM] Iteration 34, pseudo-likelihood = -19.91, time = 0.10s
+[BernoulliRBM] Iteration 35, pseudo-likelihood = -19.95, time = 0.09s
+[BernoulliRBM] Iteration 36, pseudo-likelihood = -19.65, time = 0.09s
+[BernoulliRBM] Iteration 37, pseudo-likelihood = -19.51, time = 0.14s
+[BernoulliRBM] Iteration 38, pseudo-likelihood = -19.66, time = 0.08s
+[BernoulliRBM] Iteration 39, pseudo-likelihood = -19.44, time = 0.08s
+[BernoulliRBM] Iteration 40, pseudo-likelihood = -19.47, time = 0.09s
+[BernoulliRBM] Iteration 41, pseudo-likelihood = -19.50, time = 0.09s
+[BernoulliRBM] Iteration 42, pseudo-likelihood = -19.49, time = 0.09s
+[BernoulliRBM] Iteration 43, pseudo-likelihood = -19.24, time = 0.14s
+[BernoulliRBM] Iteration 44, pseudo-likelihood = -19.30, time = 0.11s
+[BernoulliRBM] Iteration 45, pseudo-likelihood = -19.47, time = 0.10s
+[BernoulliRBM] Iteration 46, pseudo-likelihood = -19.41, time = 0.08s
+[BernoulliRBM] Iteration 47, pseudo-likelihood = -19.11, time = 0.09s
+[BernoulliRBM] Iteration 48, pseudo-likelihood = -19.16, time = 0.09s
+[BernoulliRBM] Iteration 49, pseudo-likelihood = -19.14, time = 0.13s
+[BernoulliRBM] Iteration 50, pseudo-likelihood = -19.29, time = 0.09s
+[BernoulliRBM] Iteration 51, pseudo-likelihood = -19.11, time = 0.09s
+[BernoulliRBM] Iteration 52, pseudo-likelihood = -19.01, time = 0.07s
+[BernoulliRBM] Iteration 53, pseudo-likelihood = -18.98, time = 0.12s
+[BernoulliRBM] Iteration 54, pseudo-likelihood = -18.95, time = 0.09s
+[BernoulliRBM] Iteration 55, pseudo-likelihood = -19.08, time = 0.12s
+[BernoulliRBM] Iteration 56, pseudo-likelihood = -19.01, time = 0.09s
+[BernoulliRBM] Iteration 57, pseudo-likelihood = -18.90, time = 0.10s
+[BernoulliRBM] Iteration 58, pseudo-likelihood = -19.01, time = 0.09s
+[BernoulliRBM] Iteration 59, pseudo-likelihood = -18.85, time = 0.09s
+[BernoulliRBM] Iteration 60, pseudo-likelihood = -18.98, time = 0.07s
+[BernoulliRBM] Iteration 61, pseudo-likelihood = -18.67, time = 0.07s
+[BernoulliRBM] Iteration 62, pseudo-likelihood = -18.92, time = 0.14s
+[BernoulliRBM] Iteration 63, pseudo-likelihood = -18.74, time = 0.08s
+[BernoulliRBM] Iteration 64, pseudo-likelihood = -18.83, time = 0.10s
+[BernoulliRBM] Iteration 65, pseudo-likelihood = -18.63, time = 0.08s
+[BernoulliRBM] Iteration 66, pseudo-likelihood = -18.67, time = 0.08s
+[BernoulliRBM] Iteration 67, pseudo-likelihood = -18.71, time = 0.09s
+[BernoulliRBM] Iteration 68, pseudo-likelihood = -18.83, time = 0.12s
+[BernoulliRBM] Iteration 69, pseudo-likelihood = -18.75, time = 0.11s
+[BernoulliRBM] Iteration 70, pseudo-likelihood = -18.77, time = 0.08s
+[BernoulliRBM] Iteration 71, pseudo-likelihood = -18.72, time = 0.10s
+[BernoulliRBM] Iteration 72, pseudo-likelihood = -18.60, time = 0.09s
+[BernoulliRBM] Iteration 73, pseudo-likelihood = -18.59, time = 0.09s
+[BernoulliRBM] Iteration 74, pseudo-likelihood = -18.73, time = 0.16s
+[BernoulliRBM] Iteration 75, pseudo-likelihood = -18.72, time = 0.11s
+[BernoulliRBM] Iteration 76, pseudo-likelihood = -18.77, time = 0.09s
+[BernoulliRBM] Iteration 77, pseudo-likelihood = -18.81, time = 0.09s
+[BernoulliRBM] Iteration 78, pseudo-likelihood = -18.71, time = 0.09s
+[BernoulliRBM] Iteration 79, pseudo-likelihood = -18.66, time = 0.09s
+[BernoulliRBM] Iteration 80, pseudo-likelihood = -18.68, time = 0.15s
+[BernoulliRBM] Iteration 81, pseudo-likelihood = -18.76, time = 0.08s
+[BernoulliRBM] Iteration 82, pseudo-likelihood = -18.39, time = 0.09s
+[BernoulliRBM] Iteration 83, pseudo-likelihood = -18.53, time = 0.09s
+[BernoulliRBM] Iteration 84, pseudo-likelihood = -18.39, time = 0.10s
+[BernoulliRBM] Iteration 85, pseudo-likelihood = -18.35, time = 0.09s
+[BernoulliRBM] Iteration 86, pseudo-likelihood = -18.44, time = 0.12s
+[BernoulliRBM] Iteration 87, pseudo-likelihood = -18.59, time = 0.09s
+[BernoulliRBM] Iteration 88, pseudo-likelihood = -18.56, time = 0.08s
+[BernoulliRBM] Iteration 89, pseudo-likelihood = -18.51, time = 0.10s
+[BernoulliRBM] Iteration 90, pseudo-likelihood = -18.25, time = 0.08s
+[BernoulliRBM] Iteration 91, pseudo-likelihood = -18.41, time = 0.09s
+[BernoulliRBM] Iteration 92, pseudo-likelihood = -18.51, time = 0.11s
+[BernoulliRBM] Iteration 93, pseudo-likelihood = -18.20, time = 0.13s
+[BernoulliRBM] Iteration 94, pseudo-likelihood = -18.31, time = 0.08s
+[BernoulliRBM] Iteration 95, pseudo-likelihood = -18.53, time = 0.08s
+[BernoulliRBM] Iteration 96, pseudo-likelihood = -18.44, time = 0.10s
+[BernoulliRBM] Iteration 97, pseudo-likelihood = -18.47, time = 0.07s
+[BernoulliRBM] Iteration 98, pseudo-likelihood = -18.25, time = 0.10s
+[BernoulliRBM] Iteration 99, pseudo-likelihood = -18.20, time = 0.13s
+[BernoulliRBM] Iteration 100, pseudo-likelihood = -18.51, time = 0.08s
+Training took  10.46743130683899
+Evaluation of test set using RBM Neural Net:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        45
+          1       0.94      0.98      0.96        52
+          2       0.98      0.92      0.95        53
+          3       0.91      0.91      0.91        54
+          4       1.00      0.98      0.99        48
+          5       0.95      0.95      0.95        57
+          6       0.98      0.98      0.98        60
+          7       0.94      0.96      0.95        53
+          8       0.90      0.90      0.90        61
+          9       0.90      0.91      0.90        57
+
+avg / total       0.95      0.95      0.95       540
+
+
+Initialization complete
+Iteration  0, inertia 7614.457
+Iteration  1, inertia 4998.324
+Iteration  2, inertia 4903.804
+Iteration  3, inertia 4852.318
+Iteration  4, inertia 4824.520
+Iteration  5, inertia 4804.892
+Iteration  6, inertia 4796.003
+Iteration  7, inertia 4792.567
+Iteration  8, inertia 4789.507
+Iteration  9, inertia 4784.884
+Iteration 10, inertia 4778.026
+Iteration 11, inertia 4765.662
+Iteration 12, inertia 4759.403
+Iteration 13, inertia 4756.939
+Iteration 14, inertia 4755.588
+Iteration 15, inertia 4755.008
+Iteration 16, inertia 4754.853
+Converged at iteration 16
+Initialization complete
+Iteration  0, inertia 7973.808
+Iteration  1, inertia 5022.615
+Iteration  2, inertia 4835.638
+Iteration  3, inertia 4738.538
+Iteration  4, inertia 4687.130
+Iteration  5, inertia 4673.895
+Iteration  6, inertia 4668.540
+Iteration  7, inertia 4665.132
+Iteration  8, inertia 4663.911
+Iteration  9, inertia 4663.036
+Iteration 10, inertia 4662.528
+Iteration 11, inertia 4661.889
+Iteration 12, inertia 4661.644
+Iteration 13, inertia 4661.499
+Iteration 14, inertia 4661.365
+Iteration 15, inertia 4661.307
+Converged at iteration 15
+Initialization complete
+Iteration  0, inertia 7868.188
+Iteration  1, inertia 5020.977
+Iteration  2, inertia 4893.110
+Iteration  3, inertia 4847.991
+Iteration  4, inertia 4833.819
+Iteration  5, inertia 4828.322
+Iteration  6, inertia 4825.154
+Iteration  7, inertia 4821.565
+Iteration  8, inertia 4811.255
+Iteration  9, inertia 4796.443
+Iteration 10, inertia 4785.479
+Iteration 11, inertia 4780.248
+Iteration 12, inertia 4777.045
+Iteration 13, inertia 4774.104
+Iteration 14, inertia 4771.913
+Iteration 15, inertia 4769.014
+Iteration 16, inertia 4767.371
+Iteration 17, inertia 4766.197
+Iteration 18, inertia 4765.020
+Iteration 19, inertia 4760.850
+Iteration 20, inertia 4751.567
+Iteration 21, inertia 4740.124
+Iteration 22, inertia 4736.585
+Iteration 23, inertia 4735.844
+Iteration 24, inertia 4734.178
+Iteration 25, inertia 4732.133
+Iteration 26, inertia 4728.878
+Iteration 27, inertia 4727.342
+Iteration 28, inertia 4726.015
+Iteration 29, inertia 4722.450
+Iteration 30, inertia 4713.097
+Iteration 31, inertia 4697.527
+Iteration 32, inertia 4680.658
+Iteration 33, inertia 4666.870
+Iteration 34, inertia 4657.333
+Iteration 35, inertia 4653.342
+Iteration 36, inertia 4651.060
+Iteration 37, inertia 4649.668
+Iteration 38, inertia 4649.596
+Iteration 39, inertia 4649.557
+Converged at iteration 39
+Initialization complete
+Iteration  0, inertia 7647.043
+Iteration  1, inertia 4979.356
+Iteration  2, inertia 4808.561
+Iteration  3, inertia 4747.904
+Iteration  4, inertia 4738.367
+Iteration  5, inertia 4732.874
+Iteration  6, inertia 4726.633
+Iteration  7, inertia 4714.846
+Iteration  8, inertia 4700.905
+Iteration  9, inertia 4692.362
+Iteration 10, inertia 4686.953
+Iteration 11, inertia 4684.341
+Iteration 12, inertia 4682.043
+Iteration 13, inertia 4676.634
+Iteration 14, inertia 4666.951
+Iteration 15, inertia 4655.718
+Iteration 16, inertia 4650.490
+Iteration 17, inertia 4648.492
+Iteration 18, inertia 4647.833
+Iteration 19, inertia 4647.681
+Iteration 20, inertia 4647.555
+Iteration 21, inertia 4647.447
+Iteration 22, inertia 4647.321
+Iteration 23, inertia 4647.254
+Converged at iteration 23
+Initialization complete
+Iteration  0, inertia 7888.617
+Iteration  1, inertia 4946.950
+Iteration  2, inertia 4835.831
+Iteration  3, inertia 4731.475
+Iteration  4, inertia 4682.081
+Iteration  5, inertia 4674.358
+Iteration  6, inertia 4670.651
+Iteration  7, inertia 4668.190
+Iteration  8, inertia 4663.704
+Iteration  9, inertia 4658.881
+Iteration 10, inertia 4655.567
+Iteration 11, inertia 4652.208
+Iteration 12, inertia 4650.477
+Iteration 13, inertia 4649.244
+Iteration 14, inertia 4648.757
+Iteration 15, inertia 4648.330
+Iteration 16, inertia 4647.754
+Iteration 17, inertia 4647.499
+Iteration 18, inertia 4647.456
+Iteration 19, inertia 4647.406
+Converged at iteration 19
+Initialization complete
+Iteration  0, inertia 7728.040
+Iteration  1, inertia 5088.482
+Iteration  2, inertia 4953.663
+Iteration  3, inertia 4888.015
+Iteration  4, inertia 4803.788
+Iteration  5, inertia 4735.047
+Iteration  6, inertia 4698.051
+Iteration  7, inertia 4680.210
+Iteration  8, inertia 4675.974
+Iteration  9, inertia 4673.900
+Iteration 10, inertia 4672.533
+Iteration 11, inertia 4671.787
+Iteration 12, inertia 4671.555
+Iteration 13, inertia 4671.395
+Iteration 14, inertia 4671.346
+Converged at iteration 14
+Initialization complete
+Iteration  0, inertia 7821.478
+Iteration  1, inertia 5195.882
+Iteration  2, inertia 5042.820
+Iteration  3, inertia 4940.457
+Iteration  4, inertia 4827.546
+Iteration  5, inertia 4748.257
+Iteration  6, inertia 4739.219
+Iteration  7, inertia 4737.366
+Iteration  8, inertia 4736.776
+Iteration  9, inertia 4736.527
+Iteration 10, inertia 4736.480
+Iteration 11, inertia 4736.224
+Iteration 12, inertia 4736.061
+Iteration 13, inertia 4735.979
+Converged at iteration 13
+Initialization complete
+Iteration  0, inertia 7885.558
+Iteration  1, inertia 5075.984
+Iteration  2, inertia 4897.842
+Iteration  3, inertia 4838.191
+Iteration  4, inertia 4821.734
+Iteration  5, inertia 4811.787
+Iteration  6, inertia 4802.653
+Iteration  7, inertia 4796.101
+Iteration  8, inertia 4794.776
+Iteration  9, inertia 4793.955
+Iteration 10, inertia 4793.623
+Iteration 11, inertia 4793.091
+Iteration 12, inertia 4792.763
+Iteration 13, inertia 4792.688
+Converged at iteration 13
+Initialization complete
+Iteration  0, inertia 7639.455
+Iteration  1, inertia 4895.312
+Iteration  2, inertia 4803.953
+Iteration  3, inertia 4763.955
+Iteration  4, inertia 4719.920
+Iteration  5, inertia 4700.674
+Iteration  6, inertia 4693.253
+Iteration  7, inertia 4686.583
+Iteration  8, inertia 4680.799
+Iteration  9, inertia 4672.167
+Iteration 10, inertia 4658.865
+Iteration 11, inertia 4653.033
+Iteration 12, inertia 4650.680
+Iteration 13, inertia 4649.037
+Iteration 14, inertia 4648.431
+Iteration 15, inertia 4647.900
+Iteration 16, inertia 4647.812
+Converged at iteration 16
+Initialization complete
+Iteration  0, inertia 7764.245
+Iteration  1, inertia 5176.206
+Iteration  2, inertia 5003.557
+Iteration  3, inertia 4907.860
+Iteration  4, inertia 4808.503
+Iteration  5, inertia 4742.517
+Iteration  6, inertia 4729.704
+Iteration  7, inertia 4728.155
+Iteration  8, inertia 4727.337
+Iteration  9, inertia 4727.226
+Iteration 10, inertia 4727.194
+Converged at iteration 10
+Expectation-maximization algorithm started.
+Initialization 1
+	EM iteration 1
+	EM iteration 2
+	EM iteration 3
+	EM iteration 4
+	EM iteration 5
+	EM iteration 6
+	EM iteration 7
+	EM iteration 8
+		EM algorithm converged.
+[BernoulliRBM] Iteration 1, pseudo-likelihood = -28.43, time = 0.06s
+[BernoulliRBM] Iteration 2, pseudo-likelihood = -27.46, time = 0.10s
+[BernoulliRBM] Iteration 3, pseudo-likelihood = -28.20, time = 0.09s
+[BernoulliRBM] Iteration 4, pseudo-likelihood = -26.94, time = 0.10s
+[BernoulliRBM] Iteration 5, pseudo-likelihood = -25.13, time = 0.09s
+[BernoulliRBM] Iteration 6, pseudo-likelihood = -24.96, time = 0.10s
+[BernoulliRBM] Iteration 7, pseudo-likelihood = -24.44, time = 0.10s
+[BernoulliRBM] Iteration 8, pseudo-likelihood = -24.89, time = 0.10s
+[BernoulliRBM] Iteration 9, pseudo-likelihood = -24.34, time = 0.09s
+[BernoulliRBM] Iteration 10, pseudo-likelihood = -23.45, time = 0.11s
+[BernoulliRBM] Iteration 11, pseudo-likelihood = -23.03, time = 0.08s
+[BernoulliRBM] Iteration 12, pseudo-likelihood = -23.30, time = 0.09s
+[BernoulliRBM] Iteration 13, pseudo-likelihood = -22.85, time = 0.08s
+[BernoulliRBM] Iteration 14, pseudo-likelihood = -23.08, time = 0.10s
+[BernoulliRBM] Iteration 15, pseudo-likelihood = -22.68, time = 0.08s
+[BernoulliRBM] Iteration 16, pseudo-likelihood = -22.74, time = 0.08s
+[BernoulliRBM] Iteration 17, pseudo-likelihood = -22.54, time = 0.09s
+[BernoulliRBM] Iteration 18, pseudo-likelihood = -22.09, time = 0.09s
+[BernoulliRBM] Iteration 19, pseudo-likelihood = -21.70, time = 0.09s
+[BernoulliRBM] Iteration 20, pseudo-likelihood = -21.61, time = 0.09s
+[BernoulliRBM] Iteration 21, pseudo-likelihood = -21.55, time = 0.10s
+[BernoulliRBM] Iteration 22, pseudo-likelihood = -21.68, time = 0.10s
+[BernoulliRBM] Iteration 23, pseudo-likelihood = -21.69, time = 0.08s
+[BernoulliRBM] Iteration 24, pseudo-likelihood = -21.37, time = 0.09s
+[BernoulliRBM] Iteration 25, pseudo-likelihood = -21.16, time = 0.09s
+[BernoulliRBM] Iteration 26, pseudo-likelihood = -20.99, time = 0.09s
+[BernoulliRBM] Iteration 27, pseudo-likelihood = -21.36, time = 0.09s
+[BernoulliRBM] Iteration 28, pseudo-likelihood = -20.93, time = 0.09s
+[BernoulliRBM] Iteration 29, pseudo-likelihood = -20.77, time = 0.10s
+[BernoulliRBM] Iteration 30, pseudo-likelihood = -20.84, time = 0.08s
+[BernoulliRBM] Iteration 31, pseudo-likelihood = -20.56, time = 0.10s
+[BernoulliRBM] Iteration 32, pseudo-likelihood = -20.71, time = 0.09s
+[BernoulliRBM] Iteration 33, pseudo-likelihood = -20.43, time = 0.10s
+[BernoulliRBM] Iteration 34, pseudo-likelihood = -20.27, time = 0.09s
+[BernoulliRBM] Iteration 35, pseudo-likelihood = -20.45, time = 0.10s
+[BernoulliRBM] Iteration 36, pseudo-likelihood = -20.37, time = 0.08s
+[BernoulliRBM] Iteration 37, pseudo-likelihood = -20.06, time = 0.10s
+[BernoulliRBM] Iteration 38, pseudo-likelihood = -20.03, time = 0.08s
+[BernoulliRBM] Iteration 39, pseudo-likelihood = -20.22, time = 0.10s
+[BernoulliRBM] Iteration 40, pseudo-likelihood = -20.02, time = 0.08s
+[BernoulliRBM] Iteration 41, pseudo-likelihood = -19.96, time = 0.10s
+[BernoulliRBM] Iteration 42, pseudo-likelihood = -19.93, time = 0.09s
+[BernoulliRBM] Iteration 43, pseudo-likelihood = -20.12, time = 0.11s
+[BernoulliRBM] Iteration 44, pseudo-likelihood = -19.97, time = 0.08s
+[BernoulliRBM] Iteration 45, pseudo-likelihood = -20.00, time = 0.09s
+[BernoulliRBM] Iteration 46, pseudo-likelihood = -20.13, time = 0.09s
+[BernoulliRBM] Iteration 47, pseudo-likelihood = -19.68, time = 0.10s
+[BernoulliRBM] Iteration 48, pseudo-likelihood = -19.65, time = 0.08s
+[BernoulliRBM] Iteration 49, pseudo-likelihood = -19.82, time = 0.09s
+[BernoulliRBM] Iteration 50, pseudo-likelihood = -19.95, time = 0.08s
+[BernoulliRBM] Iteration 51, pseudo-likelihood = -19.89, time = 0.07s
+[BernoulliRBM] Iteration 52, pseudo-likelihood = -19.79, time = 0.10s
+[BernoulliRBM] Iteration 53, pseudo-likelihood = -19.61, time = 0.09s
+[BernoulliRBM] Iteration 54, pseudo-likelihood = -19.81, time = 0.10s
+[BernoulliRBM] Iteration 55, pseudo-likelihood = -19.50, time = 0.10s
+[BernoulliRBM] Iteration 56, pseudo-likelihood = -19.69, time = 0.10s
+[BernoulliRBM] Iteration 57, pseudo-likelihood = -19.38, time = 0.09s
+[BernoulliRBM] Iteration 58, pseudo-likelihood = -19.72, time = 0.09s
+[BernoulliRBM] Iteration 59, pseudo-likelihood = -19.20, time = 0.09s
+[BernoulliRBM] Iteration 60, pseudo-likelihood = -19.35, time = 0.08s
+[BernoulliRBM] Iteration 61, pseudo-likelihood = -19.46, time = 0.10s
+[BernoulliRBM] Iteration 62, pseudo-likelihood = -19.38, time = 0.09s
+[BernoulliRBM] Iteration 63, pseudo-likelihood = -19.53, time = 0.10s
+[BernoulliRBM] Iteration 64, pseudo-likelihood = -19.31, time = 0.08s
+[BernoulliRBM] Iteration 65, pseudo-likelihood = -19.41, time = 0.11s
+[BernoulliRBM] Iteration 66, pseudo-likelihood = -19.43, time = 0.09s
+[BernoulliRBM] Iteration 67, pseudo-likelihood = -19.40, time = 0.10s
+[BernoulliRBM] Iteration 68, pseudo-likelihood = -19.69, time = 0.09s
+[BernoulliRBM] Iteration 69, pseudo-likelihood = -19.29, time = 0.10s
+[BernoulliRBM] Iteration 70, pseudo-likelihood = -19.42, time = 0.08s
+[BernoulliRBM] Iteration 71, pseudo-likelihood = -19.32, time = 0.09s
+[BernoulliRBM] Iteration 72, pseudo-likelihood = -19.52, time = 0.09s
+[BernoulliRBM] Iteration 73, pseudo-likelihood = -19.26, time = 0.10s
+[BernoulliRBM] Iteration 74, pseudo-likelihood = -19.28, time = 0.08s
+[BernoulliRBM] Iteration 75, pseudo-likelihood = -19.19, time = 0.10s
+[BernoulliRBM] Iteration 76, pseudo-likelihood = -19.31, time = 0.09s
+[BernoulliRBM] Iteration 77, pseudo-likelihood = -19.14, time = 0.11s
+[BernoulliRBM] Iteration 78, pseudo-likelihood = -19.23, time = 0.09s
+[BernoulliRBM] Iteration 79, pseudo-likelihood = -19.42, time = 0.09s
+[BernoulliRBM] Iteration 80, pseudo-likelihood = -19.18, time = 0.08s
+[BernoulliRBM] Iteration 81, pseudo-likelihood = -19.29, time = 0.09s
+[BernoulliRBM] Iteration 82, pseudo-likelihood = -19.16, time = 0.08s
+[BernoulliRBM] Iteration 83, pseudo-likelihood = -19.11, time = 0.09s
+[BernoulliRBM] Iteration 84, pseudo-likelihood = -19.21, time = 0.09s
+[BernoulliRBM] Iteration 85, pseudo-likelihood = -18.98, time = 0.09s
+[BernoulliRBM] Iteration 86, pseudo-likelihood = -18.97, time = 0.10s
+[BernoulliRBM] Iteration 87, pseudo-likelihood = -19.44, time = 0.08s
+[BernoulliRBM] Iteration 88, pseudo-likelihood = -19.05, time = 0.11s
+[BernoulliRBM] Iteration 89, pseudo-likelihood = -19.41, time = 0.09s
+[BernoulliRBM] Iteration 90, pseudo-likelihood = -19.13, time = 0.08s
+[BernoulliRBM] Iteration 91, pseudo-likelihood = -19.17, time = 0.08s
+[BernoulliRBM] Iteration 92, pseudo-likelihood = -19.29, time = 0.09s
+[BernoulliRBM] Iteration 93, pseudo-likelihood = -18.82, time = 0.09s
+[BernoulliRBM] Iteration 94, pseudo-likelihood = -19.01, time = 0.09s
+[BernoulliRBM] Iteration 95, pseudo-likelihood = -18.99, time = 0.09s
+[BernoulliRBM] Iteration 96, pseudo-likelihood = -19.22, time = 0.09s
+[BernoulliRBM] Iteration 97, pseudo-likelihood = -18.83, time = 0.08s
+[BernoulliRBM] Iteration 98, pseudo-likelihood = -18.86, time = 0.08s
+[BernoulliRBM] Iteration 99, pseudo-likelihood = -19.02, time = 0.10s
+[BernoulliRBM] Iteration 100, pseudo-likelihood = -19.05, time = 0.09s
+Training took  9.811627626419067
+Evaluation of test set using RBM Neural Net:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00        45
+          1       1.00      0.92      0.96        52
+          2       0.94      0.94      0.94        53
+          3       0.89      0.87      0.88        54
+          4       0.98      0.96      0.97        48
+          5       0.93      0.96      0.95        57
+          6       0.95      0.98      0.97        60
+          7       0.95      0.98      0.96        53
+          8       0.90      0.93      0.92        61
+          9       0.91      0.88      0.89        57
+
+avg / total       0.94      0.94      0.94       540
+
+
