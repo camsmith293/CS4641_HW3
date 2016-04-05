@@ -2,6 +2,7 @@ from sklearn.datasets import load_digits, load_iris
 
 from kMeansClusterer import kMeansClusterer
 from EMClusterer import EMClusterer
+from NeuralNetworkLearner import NeuralNetLearner
 from DimensionalityReduction.PCAReducer import PCAReducer
 from DimensionalityReduction.ICAReducer import ICAReducer
 from DimensionalityReduction.RCAReducer import RCAReducer
@@ -89,4 +90,19 @@ def kMeansDigitCluster_AllReductions():
         kMeans = kMeansClusterer(digits, 10, digits_name)
         kMeans.display_reduced_clusterings(reducer)
 
-kMeansDigitCluster_AllReductions()
+def kMeansIrisCluster_AllReductions():
+    reducers = [PCAReducer(iris, iris_name),
+                ICAReducer(iris, iris_name),
+                RCAReducer(iris, iris_name),
+                NMFReducer(iris, iris_name)]
+
+    for reducer in reducers:
+        kMeans = kMeansClusterer(iris, 3, iris_name)
+        kMeans.display_reduced_clusterings(reducer)
+
+def NeuralNet_PCAReduction():
+    pca = PCAReducer(iris, iris_name, num_components=4)
+    nnet = NeuralNetLearner(iris)
+    nnet.reduce_train(pca)
+
+NeuralNet_PCAReduction()
