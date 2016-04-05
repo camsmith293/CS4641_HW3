@@ -74,3 +74,27 @@ class NeuralNetLearner:
         self.rbm.n_components = len(self.X_train[0])
         self.train()
         self.evaluate()
+
+    def add_cluster_feature(self, clusterer):
+        outfile = 'out/NeuralNet' + type(clusterer).__name__ + 'FeatureOutput.txt'
+        sys.stdout = open(outfile, 'w')
+
+        # Pre expansion
+        self.train()
+        self.evaluate()
+
+        self.X_train = np.append(self.X_train,np.zeros([len(self.X_train),1]),1)
+        self.X_test = np.append(self.X_test,np.zeros([len(self.X_test),1]),1)
+
+        clusterer.cluster()
+
+        # Add cluster feature
+        for x in self.X_train:
+            x[-1] = clusterer.transform(x)
+
+        for x in self.X_test:
+            x[-1] = clusterer.transform(x)
+
+        # Pre expansion
+        self.train()
+        self.evaluate()
