@@ -90,10 +90,10 @@ class NeuralNetLearner:
 
         # Add cluster feature
         for x in self.X_train:
-            x[-1] = clusterer.transform(x)
+            x[-1] = clusterer.clusterer.transform(x)
 
         for x in self.X_test:
-            x[-1] = clusterer.transform(x)
+            x[-1] = clusterer.clusterer.transform(x)
 
         # Pre expansion
         self.train()
