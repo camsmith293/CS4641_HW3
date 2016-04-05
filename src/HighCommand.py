@@ -1,3 +1,5 @@
+import sys
+
 from sklearn.datasets import load_digits, load_iris
 
 from kMeansClusterer import kMeansClusterer
@@ -15,26 +17,30 @@ digits_name = "Digits_Dataset"
 iris_name = "Iris_Dataset"
 
 def kMeansClusterDigits():
+    sys.stdout = open('out/kMeansClusterDigits.txt', 'w')
     kMeans = kMeansClusterer(digits, 10, digits_name)
     kMeans.cluster()
-    kMeans.benchmark()
+    kMeans.benchmark("kMeans Digits")
     kMeans.display_digits_centroids()
 
 def EMClusterDigits():
+    sys.stdout = open('out/EMClusterDigits.txt', 'w')
     EM = EMClusterer(digits, 10, digits_name)
     EM.cluster()
-    EM.benchmark()
+    EM.benchmark("EM Digits")
     EM.display_digits_centroids()
 
 def kMeansClusterIris():
+    sys.stdout = open('out/kMeansClusterIris.txt', 'w')
     kMeans = kMeansClusterer(iris, 3, iris_name)
-    kMeans.cluster()
+    kMeans.cluster("kMeans Iris")
     kMeans.benchmark()
     kMeans.display_iris_clusterings()
 
 def EMClusterIris():
+    sys.stdout = open('out/EMClusterIris.txt', 'w')
     EM = EMClusterer(iris, 3, iris_name)
-    EM.cluster()
+    EM.cluster("EM Iris")
     EM.benchmark()
     EM.display_iris_clusterings()
 

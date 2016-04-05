@@ -73,10 +73,12 @@ class EMClusterer():
 
         plt.savefig(outfile)
 
-    def benchmark(self, estimator, name, data):
+    def benchmark(self, name):
         t0 = time()
         sample_size = 300
         labels = self.labels
+        estimator=self.clusterer
+        data = self.data
 
         estimator.fit(data)
         print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
