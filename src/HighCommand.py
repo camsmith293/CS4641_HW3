@@ -91,17 +91,17 @@ def kMeansDigitCluster_AllReductions():
         kMeans.display_reduced_clusterings(reducer)
 
 def kMeansIrisCluster_AllReductions():
-    reducers = [PCAReducer(iris, iris_name),
-                ICAReducer(iris, iris_name),
-                RCAReducer(iris, iris_name),
-                NMFReducer(iris, iris_name)]
+    reducers = [PCAReducer(iris, iris_name, num_components=3),
+                ICAReducer(iris, iris_name, num_components=3),
+                RCAReducer(iris, iris_name, num_components=3),
+                NMFReducer(iris, iris_name, num_components=3)]
 
     for reducer in reducers:
         kMeans = kMeansClusterer(iris, 3, iris_name)
         kMeans.display_reduced_clusterings(reducer)
 
 def NeuralNet_PCAReduction():
-    pca = PCAReducer(digits, digits_name, num_components=64)
+    pca = PCAReducer(digits, digits_name)
     nnet = NeuralNetLearner(digits)
     nnet.reduce_train(pca)
 
