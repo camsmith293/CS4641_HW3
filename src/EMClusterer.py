@@ -69,8 +69,8 @@ class EMClusterer():
 
         X = self.data
         labels = self.clusterer.predict(X)
-
-        ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float))
+        max_dim = len(X[0]) - 1
+        ax.scatter(X[:, max_dim], X[:, 0], X[:, 2], c=labels.astype(np.float))
 
         ax.w_xaxis.set_ticklabels([])
         ax.w_yaxis.set_ticklabels([])
@@ -93,12 +93,19 @@ class EMClusterer():
         self.clusterer = GMM(n_components=self.num_clusters,
                     covariance_type='diag', init_params='wc', n_iter=500, verbose=1)
         self.cluster()
-        out_img_pre = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
-        self.display_clustering(out_img_pre)
+        out_img_post = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
+        self.display_clustering(out_img_post)
         self.benchmark("Post-Reduction")
 
     def benchmark(self, name):
-        print(self.data)
         self.clusterer.fit(self.data)
         print("AIC Score:%d" % self.clusterer.aic(self.data))
         print("BIC Score:%d" % self.clusterer.bic(self.data))
+
+    def append_with_clustering(self):
+        self.cluster()
+        labels = self.clusterer.predict(self.data)
+        appended = np.append(self.data, np.zeros([len(self.data),1]),1)
+        for i,x in enumerate(appended):
+            x[-1] = labels[i]
+        return appended

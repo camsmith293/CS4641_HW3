@@ -163,7 +163,9 @@ def NeuralNet_PCAReduction():
 
 def kMeansClusterFeature_NeuralNet():
     kMeans = kMeansClusterer(digits, 10, digits_name)
+    EM = EMClusterer(digits, 10, digits_name)
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
+    nnet.add_cluster_feature(EM)
 
 EMIrisCluster_AllReductions()

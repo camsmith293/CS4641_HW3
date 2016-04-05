@@ -75,7 +75,7 @@ class NeuralNetLearner:
         self.train()
         self.evaluate()
 
-    def add_cluster_feature(self, clusterer):
+    def add_cluster_feature(self, clusterer_1, clusterer_2):
         outfile = 'out/NeuralNet' + type(clusterer).__name__ + 'FeatureOutput.txt'
         sys.stdout = open(outfile, 'w')
 
@@ -83,7 +83,9 @@ class NeuralNetLearner:
         self.train()
         self.evaluate()
 
-        appended = clusterer.append_with_clustering()
+        appended_1 = clusterer_1.append_with_clustering()
+        clusterer_2.data=appended_1
+        appended = clusterer_2.append_with_clustering()
 
         self.rbm.n_components += 1
         self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(appended, self.Y,
