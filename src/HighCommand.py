@@ -136,6 +136,26 @@ def kMeansIrisCluster_AllReductions():
         kMeans = kMeansClusterer(iris, 3, iris_name)
         kMeans.display_reduced_clusterings(reducer)
 
+def EMDigitCluster_AllReductions():
+    reducers = [PCAReducer(digits, digits_name),
+                ICAReducer(digits, digits_name),
+                RCAReducer(digits, digits_name),
+                NMFReducer(digits, digits_name)]
+
+    for reducer in reducers:
+        EM = EMClusterer(digits, 10, digits_name)
+        EM.display_reduced_clusterings(reducer)
+
+def EMIrisCluster_AllReductions():
+    reducers = [PCAReducer(iris, iris_name, num_components=3),
+                ICAReducer(iris, iris_name, num_components=3),
+                RCAReducer(iris, iris_name, num_components=3),
+                NMFReducer(iris, iris_name, num_components=3)]
+
+    for reducer in reducers:
+        EM = kMeansClusterer(iris, 3, iris_name)
+        EM.display_reduced_clusterings(reducer)
+
 def NeuralNet_PCAReduction():
     pca = PCAReducer(digits, digits_name)
     nnet = NeuralNetLearner(digits)
@@ -146,4 +166,4 @@ def kMeansClusterFeature_NeuralNet():
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
 
-reduce_iris()
+kMeansIrisCluster_AllReductions()

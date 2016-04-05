@@ -1,5 +1,6 @@
 from time import time
 
+import sys
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.mixture import GMM
@@ -27,10 +28,21 @@ class EMClusterer():
         self.clusterer.n_iter=iterations
         self.clusterer.fit(self.data)
 
-    def reduce_and_cluster(self, reducer):
+    def reduce_data(self, reducer):
         reduced = reducer.reduce()
         self.data = self.scaler.fit_transform(reduced)
-        self.cluster()
+
+    def display_clustering(self, outfile=None):
+        if self.dataset_name is "Digits_Dataset":
+            if outfile is None:
+                self.display_digits_centroids()
+            else:
+                self.display_digits_centroids(outfile)
+        else:
+            if outfile is None:
+                self.display_iris_clusterings()
+            else:
+                self.display_iris_clusterings(outfile)
 
     def display_digits_centroids(self, outfile='out/EMDigitsClusterings.png'):
         fig = plt.figure(figsize=(4.2, 4))
@@ -68,6 +80,21 @@ class EMClusterer():
         ax.set_xlabel('Petal width')
         ax.set_ylabel('Sepal length')
         ax.set_zlabel('Petal length')
+
+    def display_reduced_clusterings(self, reducer):
+        filename = "out/EM" + self.dataset_name + type(reducer).__name__ + "reduction.txt"
+        sys.stdout = open(filename, 'w')
+        print("%s Reduction and Clustering" % type(reducer).__name__)
+        print(40 * '-')
+        out_img_pre = 'out/Pre' + type(reducer).__name__ + self.dataset_name + 'EM.png'
+        self.cluster()
+        self.display_clustering(out_img_pre)
+        reducer.benchmark(self.clusterer, "Pre-Reduction", self.data)
+        print(40 * '-')
+        self.reduce_data(reducer)
+        out_img_pre = 'out/Post' + type(reducer).__name__ + self.dataset_name + 'EM.png'
+        self.display_clustering(out_img_pre)
+        reducer.benchmark(self.clusterer, "Post-Reduction", self.data)
 
     def benchmark(self, name):
         print("AIC Score:%d" % self.clusterer.aic(self.data))

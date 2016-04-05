@@ -28,7 +28,6 @@ class kMeansClusterer():
     def reduce_data(self, reducer):
         reduced = reducer.reduce()
         self.data = self.scaler.fit_transform(reduced)
-        # self.cluster()
 
     def display_clustering(self, outfile=None):
         if self.dataset_name is "Digits_Dataset":
