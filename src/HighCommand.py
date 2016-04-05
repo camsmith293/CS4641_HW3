@@ -101,8 +101,8 @@ def kMeansIrisCluster_AllReductions():
         kMeans.display_reduced_clusterings(reducer)
 
 def NeuralNet_PCAReduction():
-    pca = PCAReducer(iris, iris_name, num_components=4)
-    nnet = NeuralNetLearner(iris)
+    pca = PCAReducer(digits, digits_name, num_components=64)
+    nnet = NeuralNetLearner(digits)
     nnet.reduce_train(pca)
 
 NeuralNet_PCAReduction()
