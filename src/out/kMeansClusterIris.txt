@@ -150,4 +150,5 @@ Iteration  1, inertia 7.211
 Iteration  2, inertia 7.161
 Iteration  3, inertia 7.139
 Converged at iteration 3
+              time inertia homo    compl   v-meas  ARI     AMI      silhouette
 kMeans Iris   0.03s    6   0.736   0.747   0.742   0.716   0.733    0.504

@@ -118,5 +118,5 @@ def kMeansClusterFeature_NeuralNet():
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
 
-kMeansClusterDigits()
-kMeansClusterIris()
+EMClusterDigits()
+EMClusterIris()

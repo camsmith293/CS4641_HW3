@@ -399,4 +399,5 @@ Iteration 15, inertia 4668.229
 Iteration 16, inertia 4665.481
 Iteration 17, inertia 4665.094
 Converged at iteration 17
+                time  inertia    homo   compl   v-meas  ARI     AMI      silhouette
 kMeans Digits   1.00s    4647   0.741   0.750   0.745   0.674   0.739    0.173

@@ -56,10 +56,10 @@ class EMClusterer():
 
         plt.cla()
 
-        for n, color in enumerate('rgb'):
-            data = self.data[self.dataset.target == n]
-            ax.scatter(data[:, 0], data[:, 1], 0.8, color=color,
-                        label=self.dataset.target_names[n])
+        X = self.data
+        labels = self.clusterer.predict(X)
+
+        ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float))
 
         ax.w_xaxis.set_ticklabels([])
         ax.w_yaxis.set_ticklabels([])
@@ -67,5 +67,3 @@ class EMClusterer():
         ax.set_xlabel('Petal width')
         ax.set_ylabel('Sepal length')
         ax.set_zlabel('Petal length')
-
-        plt.savefig(outfile)
