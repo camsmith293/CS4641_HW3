@@ -146,4 +146,4 @@ def kMeansClusterFeature_NeuralNet():
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
 
-reduce_digits()
+reduce_iris()
