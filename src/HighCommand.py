@@ -27,6 +27,7 @@ def EMClusterDigits():
     sys.stdout = open('out/EMClusterDigits.txt', 'w')
     EM = EMClusterer(digits, 10, digits_name)
     EM.cluster()
+    EM.benchmark("EM Digits")
     EM.display_digits_centroids()
 
 def kMeansClusterIris():
@@ -40,6 +41,7 @@ def EMClusterIris():
     sys.stdout = open('out/EMClusterIris.txt', 'w')
     EM = EMClusterer(iris, 3, iris_name)
     EM.cluster()
+    EM.benchmark("EM Iris")
     EM.display_iris_clusterings()
 
 def reduce_digits():

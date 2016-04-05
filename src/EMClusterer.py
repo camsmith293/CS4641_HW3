@@ -68,3 +68,7 @@ class EMClusterer():
         ax.set_xlabel('Petal width')
         ax.set_ylabel('Sepal length')
         ax.set_zlabel('Petal length')
+
+    def benchmark(self, name):
+        print("AIC Score:%d" % self.clusterer.aic(self.data))
+        print("BIC Score:%d" % self.clusterer.bic(self.data))
