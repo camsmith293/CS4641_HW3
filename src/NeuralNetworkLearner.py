@@ -83,20 +83,21 @@ class NeuralNetLearner:
         self.train()
         self.evaluate()
 
+        clusterer.clusterer.fit(self.X_train)
+        train_labels = clusterer.clusterer.predict(self.X_train)
+        test_labels = clusterer.clusterer.predict(self.X_train)
+
         self.X_train = np.append(self.X_train,np.zeros([len(self.X_train),1]),1)
         self.X_test = np.append(self.X_test,np.zeros([len(self.X_test),1]),1)
 
         self.rbm.n_components += 1
-        clusterer.data = np.asarray(self.X_train.tolist() + self.X_test.tolist())
-
-        clusterer.cluster()
 
         # Add cluster feature
-        for x in self.X_train:
-            x[-1] = clusterer.clusterer.transform(x)
+        for i,x in enumerate(self.X_train):
+            x[-1] = train_labels[i]
 
-        for x in self.X_test:
-            x[-1] = clusterer.clusterer.transform(x)
+        for i,x in enumerate(self.X_test):
+            x[-1] = test_labels[i]
 
         # Pre expansion
         self.train()
