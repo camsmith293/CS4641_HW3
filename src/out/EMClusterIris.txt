@@ -1,0 +1,11 @@
+Expectation-maximization algorithm started.
+Initialization 1
+	EM iteration 1
+	EM iteration 2
+	EM iteration 3
+	EM iteration 4
+	EM iteration 5
+	EM iteration 6
+	EM iteration 7
+	EM iteration 8
+		EM algorithm converged.
