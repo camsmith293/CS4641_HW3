@@ -58,8 +58,6 @@ class EMClusterer():
 
         plt.savefig(outfile)
 
-        plt.savefig(outfile)
-
     def display_iris_clusterings(self, outfile='out/EMIrisClusterings.png'):
         fig = plt.figure(figsize=(4, 3))
         plt.clf()
@@ -78,6 +76,8 @@ class EMClusterer():
         ax.set_xlabel('Petal width')
         ax.set_ylabel('Sepal length')
         ax.set_zlabel('Petal length')
+
+        plt.savefig(outfile)
 
     def display_reduced_clusterings(self, reducer):
         filename = "out/EM" + self.dataset_name + type(reducer).__name__ + "reduction.txt"
