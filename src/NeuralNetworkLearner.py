@@ -95,6 +95,8 @@ class NeuralNetLearner:
         for x in self.X_test:
             x[-1] = clusterer.clusterer.transform(x)
 
+        self.rbm.n_components += 1
+
         # Pre expansion
         self.train()
         self.evaluate()
