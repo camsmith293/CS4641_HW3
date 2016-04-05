@@ -106,7 +106,7 @@ def NeuralNet_PCAReduction():
     nnet.reduce_train(pca)
 
 def kMeansClusterFeature_NeuralNet():
-    kMeans = kMeansClusterer(digits, 20, digits_name)
+    kMeans = kMeansClusterer(digits, 10, digits_name)
     nnet = NeuralNetLearner(digits)
     nnet.add_cluster_feature(kMeans)
 
